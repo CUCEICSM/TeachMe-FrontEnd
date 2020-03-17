@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <title>TeachME | Estadísticas</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/stats.js"></script>
+  </head>
+
+  <body>
+    <header class="bg-blue">
+      <div class="profile-data">
+        <a href="main.html"><div class="logo-sm">
+          TeachME
+        </div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/cuauhfer.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+      </div>
+      <div class="nav">
+        <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
+          <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
+          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <main onclick="checkMenu();">
+      <h1>TeachME</h1>
+
+      <section class="principal">
+        <div id="chart_general" class="chart popularity"></div>
+        <div class="gen-stats">
+          <span class="auxiliary" onclick="drawPublications();"><i class="fas fa-file-alt"></i> 1458 Publicaciones</span>
+          <span class="auxiliary" onclick="drawViews();"><i class="fas fa-eye"></i> 10.4K Vistas</span>
+          <span class="auxiliary" onclick="drawFollowers();"><i class="far fa-user"></i> 4209 Usuarios Registrados</span>
+          <span class="auxiliary"><i class="fas fa-certificate"></i> 879 Usuarios Publicando</span>
+        </div>
+      </section>
+
+      <section class="tops">
+        <h5>Top 5 vistas</h5>
+        <ul>
+          <li>Algoritmo de busqueda heuristica voraz primero el mejor</li>
+          <li>Codificación Huffman</li>
+          <li>Sucesión de Fibonnaci iterativo</li>
+          <li>Entrenamiento de una neurona (Perceptrón)</li>
+          <li>Grafo dinamico ponderado</li>
+        </ul>
+      </section>
+
+      <section class="tops">
+        <h5>Top 5 publicadores</h5>
+        <ul>
+          <li>Pablo Alejandro Barrera Robledo</li>
+          <li>Cuauhtli Fernando Benavides Hernández</li>
+          <li>Julio Cesar Morales Ramos</li>
+          <li>Luis Angel Hernández Hernández</li>
+          <li>Leonardo Daniel Castolo Avila</li>
+        </ul>
+      </section>
+
+      <section class="tops">
+        <h5>Top 5 materias más buscadas</h5>
+        <ul>
+          <li>Inteligencia Artificial I</li>
+          <li>Sistemas Basados en Conocimientos</li>
+          <li>Estructuras de Datos II</li>
+          <li>Arquitectura de Computadoras</li>
+          <li>Algoritmia</li>
+        </ul>
+      </section>
+    </main>
+
+    <aside>
+      <section class="notice">
+        <h5>Avisos</h5>
+        <div class="adds pop-warning">
+          <span class="icon"><i class="fas fa-exclamation"></i></span>
+          <div>
+            <span class="title">Periodo de mantenimiento programado</span>
+            <span class="date">20/03/2020 8:00 AM</span>
+          </div>
+        </div>
+
+        <div class="adds pop-advice">
+          <span class="icon"><i class="fas fa-check-circle"></i></span>
+          <div>
+            <span class="title">Ya somos más de 1000 usuarios</span>
+            <span class="date">20/03/2020 8:00 AM</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recomends">
+        <h5>Recomendado para ti</h5>
+        <div class="recomendation">
+          <div class="icon">
+            <i class="fas fa-file-alt"></i>
+            <span class="stars"><i class="fas fa-star star"></i> 4.1</span>
+          </div>
+          <div class="data">
+            <span class="title">Algoritmo Backpropagation para MLP</span>
+            <span class="subject">Inteligencia Artificial II</span>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <div class="drop-down bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="menu-theme">Usuario
+          <ul>
+            <li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li>
+            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">TeachMe
+          <ul>
+            <li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li>
+            <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li>
+            <li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li>
+            <li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li>
+          </ul>
+        </li>
+        <li class="menu-theme">
+          Administrador
+          <ul>
+            <li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li>
+            <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
+            <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </body>
+  <script type="text/javascript">
+    topicsChart();
+  </script>
+</html>

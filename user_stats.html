@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/user_stats.css">
+    <title>TeachME | Estadísticas</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="profile">
+        <div class="cover"></div>
+        <div for="profile-pict" class="img" style="background-image: url('img/users/cuauhfer.jpg')"></div>
+        <input id="profile-pict" type="file" name="" value="">
+        <div class="nombre">
+          <h1>Cuauhtli Fernando Benavides Hernández</h1>
+          <a href="user.html"><h3>@CuauhFer</h3></a>
+          <p>
+            Técnico en Informática <br>
+            Ingeniero en Computación <br>
+            Programador <br>
+          </p>
+        </div>
+        <nav class="navigation">
+          <ul>
+            <a href="main.html"><li>Inicio</li></a>
+            <a href="user.html"><li>Perfil</li></a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <span class="success"><i class="fas fa-certificate"></i> Perfil verificado</span>
+      <h3>Estadísticas de usuario</h3>
+      <section class="principal">
+        <div id="chart_general" class="chart popularity"></div>
+        <div class="gen-stats">
+          <h5>Cuauhtli Fernando Benavides Hernández</h5>
+          <h6>@CuauhFer</h6>
+          <span class="auxiliary" onclick="drawPublications();"><i class="fas fa-file-alt"></i> 4 Publicaciones</span>
+          <span class="auxiliary" onclick="drawViews();"><i class="fas fa-eye"></i> 1078 Vistas</span>
+          <span class="auxiliary" onclick="drawFollowers();"><i class="far fa-user"></i> 479 Seguidores</span>
+          <span class="primary"><i class="fas fa-star star"></i>  4.7 Estrellas</span>
+          <span class="primary"><i class="fas fa-trophy"></i> 10 Logros conseguidos</span>
+        </div>
+      </section>
+
+      <section class="stat">
+        <div id="chart-subjects" class="chart subjects"></div>
+        <div class="description">
+          <h5>Temas más vistos</h5>
+          <ul>
+            <li>Inteligencia Artificial I</li>
+            <li>Estructura de Datos II</li>
+            <li>Programación</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="stat">
+        <div id="chart-publication" class="chart subjects"></div>
+        <div class="description">
+          <h5>Materias con más contenido publicado</h5>
+          <ul>
+            <li>Inteligencia Artificial I</li>
+            <li>Estructura de Datos II</li>
+            <li>Programación</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+  </body>
+  <script type="text/javascript">
+    topicsChart();
+  </script>
+</html>

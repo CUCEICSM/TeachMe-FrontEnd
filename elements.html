@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <script type="text/javascript" src="js/jscolor.js"></script>
+    <title>Framework TeachMe</title>
+  </head>
+  <body>
+    <!-- Titulos -->
+    <div class="element-box">
+      <span class="element">Titulos</span>
+      <h1>Titulo Principal</h1>
+      <h2>Titulo secundario</h2>
+      <h3>Titulo secundario</h3>
+      <h4>Subtitulos</h4>
+      <h5>Subtitulos</h5>
+      <h6>Secciones</h6>
+    </div>
+
+    <!-- Fondos -->
+    <div class="element-box">
+      <span class="element">Fondo</span>
+      <div class="element-flex">
+        <div class="bg-primary element-flex">TeachMe <br> Fondo 1</div>
+        <div class="bg-secondary element-flex">TeachMe <br> Fondo 2</div>
+      </div>
+    </div>
+
+    <!-- Paleta de colores -->
+    <div class="element-box">
+      <span class="element">Paleta de colores</span>
+      <div class="element-flex">
+        <div class="color" style="background: rgba( 80, 15,187, 1);"></div>
+        <div class="color" style="background: rgba(166, 15,187, 1);"></div>
+        <div class="color" style="background: rgba( 73,165,191, 1);"></div>
+        <div class="color" style="background: rgba( 15, 96,187, 1);"></div>
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="element-box">
+      <span class="element">Botones</span>
+      <div class="element-flex">
+        <button class="btn" type="button">Botón simple</button>
+        <button class="btn primary" type="button">Botón principal</button>
+        <button class="btn secondary" type="button">Botón secundario</button>
+        <button class="btn tertiary" type="button">Botón terciario</button>
+        <button class="btn auxiliary" type="button">Botón auxiliar</button>
+      </div>
+      <div class="element-flex">
+        <button class="btn primary small" type="button">Botón pequeño</button>
+        <button class="btn primary" type="button">Botón normal</button>
+        <button class="btn primary big" type="button">Botón grande</button>
+      </div>
+    </div>
+
+    <div class="element-box">
+      <span class="element">Formularios</span>
+
+      <label for="texto">Texto </label>
+      <input type="text" id="texto" placeholder="Texto">
+
+      <label for="password">Password </label>
+      <input type="password" id="password" placeholder="Password">
+
+      <label for="numero">Número</label>
+      <input type="number" id="numero" placeholder="Número">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="EMail">
+
+      <label for="fecha">Fecha</label>
+      <input type="date" id="fecha" placeholder="Fecha">
+
+      <label for="busqueda">Búsqueda</label>
+      <input type="search" id="busqueda" placeholder="">
+
+      <!-- Radio buttons -->
+      <fieldset>
+        <legend>Radio Buttons</legend>
+        <input type="radio" id="radio1" name="radio" value="1">
+        <label for="radio1">
+          <div class="radio"></div>
+          Radio button
+        </label>
+
+        <input type="radio" id="radio2" name="radio" value="2">
+        <label for="radio2">
+          <div class="radio"></div>
+          Radio button
+        </label>
+
+        <input type="radio" id="radio3" name="radio" value="3">
+        <label for="radio3">
+          <div class="radio"></div>
+          Radio button
+        </label>
+      </fieldset>
+
+      <!-- Checkbox -->
+      <fieldset>
+        <legend>Check Box</legend>
+
+        <input type="checkbox" id="check1" name="check" value="1">
+        <label for="check1">
+          <div class="check"><i class="fas fa-check"></i></div>
+          Checkbox
+        </label>
+
+        <input type="checkbox" id="check2" name="check" value="2">
+        <label for="check2">
+          <div class="check"><i class="fas fa-check"></i></div>
+          Checkbox
+        </label>
+
+        <input type="checkbox" id="check3" name="check" value="3">
+        <label for="check3">
+          <div class="check"><i class="fas fa-check"></i></div>
+          Checkbox
+        </label>
+
+        <input type="checkbox" id="check4" name="check" value="4">
+        <label for="check4">
+          <div class="check"><i class="fas fa-check"></i></div>
+          Checkbox
+        </label>
+      </fieldset>
+
+      <label for="range">Rango</label>
+      <input type="range" id="range" min="0" max="10">
+
+      <label class="lb-color btn" for="color">
+        <span><i class="fas fa-tint"></i>Color</span>
+        <input class="jscolor" id="color" value="500FBB">
+      </label>
+
+      <label class="lb-file btn auxiliary" for="archivo">
+        <span><i class="fas fa-file"></i> Archivo</span>
+        <input type="file" id="archivo">
+      </label>
+
+    </div>
+  </body>
+</html>

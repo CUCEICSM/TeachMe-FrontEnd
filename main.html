@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>TeachME | Inicio</title>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+
+  <body>
+    <header class="bg-blue">
+      <div class="profile-data">
+        <a href="main.html"><div class="logo-sm">
+          TeachME
+        </div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/cuauhfer.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+      </div>
+      <div class="nav">
+        <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
+          <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
+          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <main onclick="checkMenu();">
+      <h1>Publicaciones destacadas</h1>
+
+      <div class="control">
+        <ul>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Fecha</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Valoración</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Vistas</li>
+        </ul>
+        <ul>
+          <li onclick="gridView();"><i class="fas fa-th"></i></li>
+          <li onclick="listView();"><i class="fas fa-list"></i></li>
+        </ul>
+      </div>
+
+      <section class="posted">
+        <div class="post">
+          <div class="img-post row-top" style="background-image: url('img/subjects/inteligencia artificial I.jpg');">
+            <div class="left">
+              <span class="type"> <i class="fas fa-file-alt"></i> Articulo</span>
+              <span class="stars"><i class="fas fa-star star"></i> 4.8 </span>
+              <span class="views"><i class="fas fa-eye"></i> 1790 </span>
+            </div>
+            <div class="right">
+              <h6 class="name">Algoritmo de busqueda heuristica voraz primero el mejor</h6>
+            </div>
+          </div>
+          <div class="row-bottom">
+            <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+            <span class="subject"><i class="fas fa-graduation-cap"></i> Inteligencia Artificial I</span>
+            <span class="resume">Descripción del algoritmo heuristico. </span>
+            <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="img-post row-top" style="background-image: url('img/subjects/estructura de datos II.jpg');">
+            <div class="left">
+              <span class="type"><i class="fab fa-youtube"></i> Video</span>
+              <span class="stars"><i class="fas fa-star star"></i> 4.2 </span>
+              <span class="views"><i class="fas fa-eye"></i> 1290 </span>
+            </div>
+            <div class="right">
+              <h6 class="name">Codificación Huffman</h6>
+            </div>
+          </div>
+          <div class="row-bottom">
+            <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+            <span class="subject"><i class="fas fa-graduation-cap"></i> Estructuras de datos II</span>
+            <span class="resume">Video con descripción y pasos del algoritmo, ejemplo práctico.</span>
+            <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="img-post row-top" style="background-image: url('img/subjects/programacion.jpg');">
+            <div class="left">
+              <span class="type"><i class="fas fa-chalkboard-teacher"></i> Ejercicio</span>
+              <span class="stars"><i class="fas fa-star star"></i> 4.6 </span>
+              <span class="views"><i class="fas fa-eye"></i> 341 </span>
+            </div>
+            <div class="right">
+              <h6 class="name">Sucesión de Fibonnaci iterativo</h6>
+            </div>
+          </div>
+          <div class="row-bottom">
+            <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+            <span class="subject"><i class="fas fa-graduation-cap"></i> Programación</span>
+            <span class="resume">Ejercicio propuesto como refuerzo para el tema de ciclos.</span>
+            <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="img-post row-top" style="background-image: url('img/subjects/inteligencia artificial II.jpg');">
+            <div class="left">
+              <span class="type"><i class="fas fa-file-signature"></i> Ejemplo</span>
+              <span class="stars"><i class="fas fa-star star"></i> 4.4 </span>
+              <span class="views"><i class="fas fa-eye"></i> 215 </span>
+            </div>
+            <div class="right">
+              <h6 class="name">Entrenamiento de una neurona (Perceptrón)</h6>
+            </div>
+          </div>
+          <div class="row-bottom">
+            <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+            <span class="subject"><i class="fas fa-graduation-cap"></i> Inteligencia Artificial II</span>
+            <span class="resume">Ejemplo paso a paso del entrenamiento de una neurona artificial, analisis y matematicas del proceso.</span>
+            <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <aside>
+      <section class="notice">
+        <h5>Avisos</h5>
+        <div class="adds pop-warning">
+          <span class="icon"><i class="fas fa-exclamation"></i></span>
+          <div>
+            <span class="title">Periodo de mantenimiento programado</span>
+            <span class="date">20/03/2020 8:00 AM</span>
+          </div>
+        </div>
+
+        <div class="adds pop-advice">
+          <span class="icon"><i class="fas fa-check-circle"></i></span>
+          <div>
+            <span class="title">Ya somos más de 1000 usuarios</span>
+            <span class="date">20/03/2020 8:00 AM</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recomends">
+        <h5>Recomendado para ti</h5>
+        <div class="recomendation">
+          <div class="icon">
+            <i class="fas fa-file-alt"></i>
+            <span class="stars"><i class="fas fa-star star"></i> 4.1</span>
+          </div>
+          <div class="data">
+            <span class="title">Algoritmo Backpropagation para MLP</span>
+            <span class="subject">Inteligencia Artificial II</span>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <div class="drop-down bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="menu-theme">Usuario
+          <ul>
+            <li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li>
+            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">TeachMe
+          <ul>
+            <li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li>
+            <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
+            <li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li>
+            <li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li>
+          </ul>
+        </li>
+        <li class="menu-theme">
+          Administrador
+          <ul>
+            <li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li>
+            <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
+            <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </body>
+</html>

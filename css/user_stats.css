@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Roboto', arial;
+  overflow-x: hidden;
+}
+
+header{
+  background-image: url('../img/bg/blue.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 40vh;
+  overflow: visible;
+  border-bottom: 3px solid black;
+}
+
+header a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .profile{
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  overflow: visible;
+}
+
+header .profile .img{
+  width: 10vw;
+  height: 10vw;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 45%;
+  top: 75%;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+header .profile .nombre{
+  text-align: right;
+  padding: 15px;
+  width: 100%;
+}
+
+header .profile .nombre h1{
+  font-size: 32px;
+  padding: 0 15px;
+  color: white;
+  position: relative;
+  z-index: 20;
+}
+
+header .profile .nombre h3{
+  font-weight: normal;
+  font-size: 16px;
+  padding: 0 15px;
+  color: white;
+  position: relative;
+  z-index: 20;
+}
+
+header .profile .nombre p{
+  font-size: 18px;
+  padding: 15px;
+  color: lightgray;
+  position: relative;
+  z-index: 20;
+}
+
+header .profile .cover{
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+header .profile .navigation{
+  width: 100%;
+  position: absolute;
+  bottom: -10%;
+  z-index: 20;
+}
+
+header .profile .navigation ul{
+  padding: 10px;
+  list-style: none;
+  display: flex;
+}
+
+header .profile .navigation ul li{
+  font-size: 20px;
+  width: 50px;
+  color: white;
+  cursor: pointer;
+  margin: 5px 10px;
+}
+
+header .profile .navigation ul li:hover{
+  text-decoration: underline;
+}
+
+main{
+  margin-top: 20px;
+  width: 90%;
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+main h3{
+  width: 100%;
+  text-align: center;
+}
+
+main .principal{
+  margin: 10px 0 25px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+main .chart{
+  width: 30%;
+  height: 240px;
+  overflow: hidden;
+}
+
+main .gen-stats{
+  width: 70%;
+  margin: 50px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+main .gen-stats h5, main .gen-stats h6{
+  width: 100%;
+  padding: 5px 25px;
+}
+
+main .gen-stats span, main span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 10px;
+}
+
+main .gen-stats .auxiliary{
+  cursor: pointer;
+}
+
+main .gen-stats .auxiliary:hover{
+  opacity: 0.75;
+}
+
+main .gen-stats span i{
+  font-size: 20px;
+}
+
+main .stat{
+  margin: 5px 0 10px 0;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+main .stat .chart{
+  width: 60%;
+  overflow: hidden;
+}
+
+main .stat .description{
+  width: 40%;
+  padding: 0 25px;
+}
+
+main .stat .description h5{
+  margin-bottom: 10px;
+}
+
+main .stat .description ul li{
+  padding: 5px 0;
+  margin: 5px 0;
+  cursor: pointer;
+  border-left: 0px solid rgba(15, 54, 187, 1);
+  transition: all 0.3s;
+}
+
+main .stat .description ul li:hover{
+  border-left: 25px solid rgba(15, 54, 187, 1);
+  padding: 5px;
+}
