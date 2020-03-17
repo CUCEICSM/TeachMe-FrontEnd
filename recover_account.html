@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework2.css">    
+    <link rel="stylesheet" href="css/recover_account.css">
+
+    <script type="text/javascript" src="js/jquery.min2.js"></script>
+    <script type="text/javascript" src="js/recover_account.js"></script>
+
+    <title>TeachMe | Recuperar Cuenta</title>
+  </head>
+  <body class="bg-purple">
+    <header>
+      <div class="logo-sm">
+        TeachME
+      </div>
+      <div class="nav">
+      </div>
+    </header>
+
+    <main>
+      <section id="recover_account_id" class="bg-purple ">
+        <div class="box">
+          <div class="login">
+            <div class="logo-xl">
+              TeachME
+            </div>
+            <div class="logo-sm">
+              Recuperación de cuenta
+            </div>
+            <br>
+            <p>
+                Se te enviará un código de recuperación al correo relacionado a tu cuenta:
+            </p>
+            <form action="" method="post" autocomplete="off" >
+              
+              <input class="input-line" id="username" type="text" name="" value="" placeholder="Correo...">
+
+              <button class="btn auxiliary" type="button" name="button" onclick='ShowContent("recover_account_id","recover_account_code")'>Enviar código</button>
+              <button class="btn tertiary" type="button" name="button" onclick="Cancel();">Cancelar</button>
+            </form>
+          </div>
+
+          
+        </div>
+      </section>
+      <section id="recover_account_code" class="bg-purple pantalla">
+        <div class="box">
+          <div class="login">
+            <div class="logo-xl">
+              TeachME
+            </div>
+            <div class="logo-sm">
+              Recuperación de cuenta
+            </div>
+            <br>
+            <p>
+                Introduce el código que recibiste en el correo *****lio@alumno.udg.mx
+            </p>
+            <form action="" method="post" autocomplete="off">
+              
+              <input class="input-line" id="username" type="text" name="" value="" placeholder="Código">
+
+             <button class="btn auxiliary" type="button" name="button" onclick='ShowContent("recover_account_code","recover_account_reset")'>
+                Continuar</button>
+              <button class="btn tertiary" type="button" name="button" onclick="Cancel();">Cancelar</button>
+            </form>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <section id="recover_account_reset" class="bg-purple pantalla">
+        <div class="box">
+          <div class="login">
+            <div class="logo-xl">
+              TeachME
+            </div>
+            <div class="logo-sm">
+              Recuperación de cuenta
+            </div>
+            <br>
+            <p>
+                Escribe tu nueva contraseña para la cuenta dolores.maria@alumno.udg.mx
+            </p>
+            <form action="" method="post" autocomplete="off">
+                <label for="username">Nueva contraseña</label>
+                <input class="input-line" id="username" type="password" name="" value="" placeholder="Nueva contraseña">
+
+                <label for="username">Repetir nueva contraseña</label>
+                <input class="input-line" id="username" type="password" name="" value="" placeholder="Repetir contraseña">
+
+              <button class="btn auxiliary" type="button" name="button" onclick="ResetComplete();">Continuar</button>
+              <button class="btn tertiary" type="button" name="button" onclick="Cancel();">Cancelar</button>
+            </form>
+          </div>
+
+          
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

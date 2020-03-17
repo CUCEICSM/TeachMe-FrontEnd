@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/catalogue.css">
+    <title>TeachME | Catálogo</title>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/catalogue_view.js"></script>
+  </head>
+
+  <body onload="InitializeContent();">
+    <header class="bg-blue">
+      <div class="profile-data">
+        <a href="main.html"><div class="logo-sm">
+          TeachME
+        </div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/julio.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+      </div>
+      <div class="nav">
+        <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
+          <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
+          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <main onclick="checkMenu();">
+      <h1>Catálogo</h1>
+
+      <div class="control">
+        <ul>          
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>        
+        </ul>
+      </div>
+
+      <!-------------------------------------------------------Materias---------------------------------------->
+      <div class="materias">
+          <div class="materia">
+            <div class="list-card" onclick='ShowContent("programacion");'>
+               <i class="fas fa-graduation-cap row" > <h6> Programación</h6></i>
+            </div>
+            <div id="programacion" class="topic-content">
+                <ul>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Objetos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Encapsulamiento</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Archivos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Objetos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Encapsulamiento</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Archivos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Objetos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Encapsulamiento</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Archivos</a></li>
+                    </ul>
+            </div>
+          </div>
+          <div class="materia">
+            <div class="list-card" onclick='ShowContent("algoritmia");'>
+               <i class="fas fa-graduation-cap row" > <h6> Algoritmia</h6></i>
+            </div>
+            <div id="algoritmia" class="topic-content">
+                <ul>
+                        
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Backtracking</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Recursividad</a></li>
+                    </ul>
+            </div>
+          </div>
+          <div class="materia">
+            <div class="list-card" onclick='ShowContent("edd");'>
+               <i class="fas fa-graduation-cap row" > <h6> Estructuras de datos</h6></i>
+            </div>
+            <div id="edd" class="topic-content">
+                <ul>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Archivos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Punteros</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Listas simples</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Listas dobles</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Lista circular</a></li>
+                    </ul>
+            </div>
+          </div>
+          <div class="materia">
+            <div class="list-card" onclick='ShowContent("ia");'>
+               <i class="fas fa-graduation-cap row" > <h6> Inteligencia Artificial</h6></i>
+            </div>
+            <div id="ia" class="topic-content">
+                <ul>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> IRobot</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> She</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Crea tu propia Siri</a></li>
+                    </ul>
+            </div>
+          </div>
+          <div class="materia">
+            <div class="list-card" onclick='ShowContent("redes");'>
+               <i class="fas fa-graduation-cap row" > <h6> Redes</h6></i>
+            </div>
+            <div id="redes" class="topic-content">
+                <ul>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Conceptos básicos</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> IP</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> DNS</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Capas OZI</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> IEEE</a></li>
+                        <li class="fas fa-angle-right"><a href="#" class="content-title"> Poncha tu propio cable</a></li>
+                    </ul>
+            </div>
+          </div>
+          
+          
+      </div>
+      
+    </main>
+
+    <aside>
+      <section class="notice">
+        <h5>Avisos</h5>
+        <div class="adds pop-warning">
+          <span class="icon"><i class="fas fa-exclamation"></i></span>
+          <div>
+            <span class="title">Periodo de mantenimiento programado</span>
+            <span class="date">20/03/2020 8:00 AM</span>
+          </div>
+        </div>
+
+        <div class="adds pop-advice">
+          <span class="icon"><i class="fas fa-check-circle"></i></span>
+          <div>
+            <span class="title">Ya somos más de 1000 usuarios</span>
+            <span class="date">20/03/2020 8:00 AM</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="recomends">
+        <h5>Recomendado para ti</h5>
+        <div class="recomendation">
+          <div class="icon">
+            <i class="fas fa-file-alt"></i>
+            <span class="stars"><i class="fas fa-star star"></i> 4.1</span>
+          </div>
+          <div class="data">
+            <span class="title">Algoritmo Backpropagation para MLP</span>
+            <span class="subject">Inteligencia Artificial II</span>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <div class="drop-down bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="menu-theme">Usuario
+          <ul>
+            <li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li>
+            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">TeachMe
+          <ul>
+            <li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li>
+            <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
+            <li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li>
+            <li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li>
+          </ul>
+        </li>
+        <li class="menu-theme">
+          Administrador
+          <ul>
+            <li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li>
+            <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
+            <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="drop-down bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="menu-theme">Usuario
+          <ul>
+            <li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li>
+            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">TeachMe
+          <ul>
+            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
+            <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
+            <li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li>
+          </ul>
+        </li>
+        <li class="menu-theme">
+          Administrador
+          <ul>
+            <li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li>
+            <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
+            <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.formulario{
+    padding: 20px 20px 20px 20px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  
+  .formulario input{
+    width:250px;
+    background-color: white;
+  }
+  
+  .popup label{
+    color: black;
+  }
+  
+  .formulario button{
+    background-color: white;
+  }
