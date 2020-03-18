@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/catalogue.css">
+    <link  rel="icon" href="img/logoAB.png" type="image/png">
     <title>TeachME | Catálogo</title>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -19,8 +20,8 @@
   <body onload="InitializeContent();">
     <header class="bg-blue">
       <div class="profile-data">
-        <a href="main.html"><div class="logo-sm">
-          TeachME
+        <a href="main.html"><div class="logo-sm" title="Inicio">
+          TeachME <img src="img/logoAB.png" class="logo-img">
         </div></a>
         <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/julio.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
         <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
@@ -116,8 +117,6 @@
                     </ul>
             </div>
           </div>
-          
-          
       </div>
       
     </main>
@@ -169,46 +168,16 @@
         </li>
         <li class="menu-theme">TeachMe
           <ul>
-            <li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li>
-            <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
-            <li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li>
-            <li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li>
-          </ul>
-        </li>
-        <li class="menu-theme">
-          Administrador
-          <ul>
-            <li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li>
-            <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
-            <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
-          </ul>
-        </li>
-      </ul>
-
-    </div>
-
-    <div class="drop-down bg-blue">
-      <div class="triangle-up"></div>
-      <ul>
-        <li class="menu-theme">Usuario
-          <ul>
-            <li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li>
-            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
-            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
-          </ul>
-        </li>
-        <li class="menu-theme">TeachMe
-          <ul>
             <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
             <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
-            <li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li>
+            <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
           </ul>
         </li>
         <li class="menu-theme">
           Administrador
           <ul>
-            <li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li>
+            <a href="grid_users.html"><li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li></a>
             <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
             <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
           </ul>

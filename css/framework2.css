@@ -505,6 +505,18 @@ i{
   font-size: 24px;
 }
 
+.logo-sm .logo-img{
+  width: 35px;
+  height: 35px;
+  margin-bottom: -10px;
+}
+
+.logo-img{
+  width: 75px;
+  height: 75px;
+  margin-bottom: -10px;
+}
+
 /* Embeed videos */
 
 iframe{

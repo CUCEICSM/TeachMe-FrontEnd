@@ -477,7 +477,7 @@ hr{
   margin: 10px 0;
 }
 
-.edit .archivements .obtained{
+.edit .achievements .obtained{
   width: 100%;
   min-height: 125px;
 
@@ -493,7 +493,7 @@ hr{
   align-items: center;
 }
 
-.edit .archivements .obtained .archivement{
+.edit .achievements .obtained .achievement{
   margin: 10px;
 
   width: 50px;
@@ -507,7 +507,7 @@ hr{
   cursor: pointer;
 }
 
-.edit .archivements .obtained button{
+.edit .achievements .obtained button{
   width: 40%;
   background: transparent;
   border: 0;
@@ -517,6 +517,6 @@ hr{
   margin-left: 10%;
 }
 
-.edit .archivements .obtained button:hover{
+.edit .achievements .obtained button:hover{
   box-shadow: 0 2px 0 0 rgba(80, 15, 187, 1);
 }
