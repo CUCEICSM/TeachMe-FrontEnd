@@ -230,7 +230,7 @@ display: block;
 .achImg-bronze{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(205, 127, 50);
   box-shadow: 0 0 10px rgba(205, 127, 50, 1);
 }
@@ -238,7 +238,7 @@ display: block;
 .achImg-silver{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(138, 149, 151);
   box-shadow: 0 0 10px rgba(138, 149, 151, 1);
 }
@@ -246,7 +246,7 @@ display: block;
 .achImg-gold{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(255, 190, 0);
   box-shadow: 0 0 10px rgba(255, 190, 0, 1);
 }
@@ -254,7 +254,7 @@ display: block;
 .achImg-platinum{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(227, 228, 229);
   box-shadow: 0 0 10px rgba(227, 228, 229, 1);
 }
@@ -262,7 +262,7 @@ display: block;
 .achImg-legend {
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(125, 0, 190);
   box-shadow: 0 0 10px rgba(125, 0, 190, 1);
 }
@@ -270,7 +270,7 @@ display: block;
 .achImg-unique{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(32, 224, 19);
   box-shadow: 0 0 10px rgba(32, 224, 19, 1);
 }
@@ -278,7 +278,7 @@ display: block;
 .achImg-secret{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: solid 5px rgb(0, 0, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
@@ -286,6 +286,6 @@ display: block;
 .achImg-locked{
   height: 125px;
   width: 125px;
-  border-radius: 50%; 
+  border-radius: 50%;
   filter: grayscale(100%) opacity(25%);
 }
