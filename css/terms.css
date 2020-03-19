@@ -1,7 +1,6 @@
 body{
   text-align: center;
 }
-
 header{
   width: 100%;
   height: 75px !important;
@@ -62,8 +61,4 @@ main{
 
 .head-btn:hover{
   width: 200px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d865b0fd2352879a1088e481fe533dd11d600094

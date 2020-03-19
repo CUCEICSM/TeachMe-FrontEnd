@@ -235,7 +235,6 @@ display: block;
 }
 
 .bronze{
-  border-radius: 50%;
   border: solid 5px rgb(205, 127, 50);
   box-shadow: 0 0 10px rgba(205, 127, 50, 1);
 }
@@ -281,9 +280,6 @@ display: block;
 }
 
 .secret{
-  height: 125px;
-  width: 125px;
-  border-radius: 50%;
   border: solid 5px rgb(0, 0, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
