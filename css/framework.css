@@ -14,8 +14,7 @@
 
   <i class="fas fa-plus"></i>                                                   Icono más, añadir o agregar
   <i class="fas fa-star"></i>                                                   Iconos de estrellas
-  <i class="fas fa-star-half-alt"></i>                                          Icono media estrella
-  <i class="far fa-star"></i>                                                   Estrella vacia
+  <i class="fas fa-star-half"></i>                                              Icono media estrella
   <i class="fas fa-eye"></i>                                                    Icono de vistas
 
   <i class="fas fa-file-alt"></i>                                               Publicación tipo articulo
@@ -867,4 +866,4 @@ aside .recomends .recomendation .data .subject{
   width: 100%;
   line-height: 12px;
   color: rgba(80, 15, 187, 1);
-}
+} 
