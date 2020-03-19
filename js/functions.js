@@ -50,6 +50,7 @@ function gridView(){
 function checkMenu(){
   if(menuView == true){
     $('.drop-down').hide(300);
+    $('.notification-list').hide(300);
     menuView = false;
   }
 }
@@ -61,6 +62,17 @@ function toggleMenu(){
   }
   else{
     $('.drop-down').hide(300);
+    menuView = false;
+  }
+}
+
+function toggleNotifications(){
+  if(menuView == false){
+    $('.notification-list').show(300);
+    menuView = true;
+  }
+  else{
+    $('.notification-list').hide(300);
     menuView = false;
   }
 }

@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/main.css">
     <link  rel="icon" href="img/logoAB.png" type="image/png">
-    <title>TeachME | Inicio</title>
-
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <title>TeachME | Inicio</title>
   </head>
 
   <body>
@@ -21,8 +20,8 @@
         <a href="main.html"><div class="logo-sm" title="Inicio">
           TeachME <img src="img/logoAB.png" class="logo-img">
         </div></a>
-        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/cuauhfer.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
-        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a onclick="toggleNotifications();"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
       </div>
       <div class="nav">
         <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
@@ -182,16 +181,75 @@
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
           </ul>
         </li>
-        <li class="menu-theme">
-          Administrador
+        <li class="menu-theme">Administrador
           <ul>
             <a href="grid_users.html"><li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li></a>
-            <li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li>
-            <li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li>
+            <a href="grid_publications.html"><li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li></a>
+            <a href="grid_reports.html"><li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li></a>
           </ul>
         </li>
       </ul>
+    </div>
 
+    <div class="notification-list bg-blue">
+      <div class="triangle-up"></div>
+      <table>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-exclamation"></i></span>
+            <div>
+              <span class="title">Periodo de mantenimiento programado</span>
+              <br>
+              <span class="date">10/03/2020 8:00 AM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-user-plus"></i></span>
+            <div>
+              <span class="title">@alexBar ha comenzado a seguirte</span>
+              <br>
+              <span class="date">18/03/2020 4:48 PM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+            <div>
+              <span class="title">Recibiste un reporte en la publicación: <br> Codificación Huffman</span>
+              <br>
+              <span class="date">18/03/2020 5:09 PM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-quote-right"></i></span>
+            <div>
+              <span class="title">@alexBar te mencionó en un comentario</span>
+              <br>
+              <span class="date">18/03/2020 12:01 PM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-trash-alt"></i></span>
+            <div>
+              <span class="title">Se ha eliminado tu publicación: <br> Algoritmo Kruskal</span>
+              <br>
+              <span class="date">14/03/2020 12:00 AM</span>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>

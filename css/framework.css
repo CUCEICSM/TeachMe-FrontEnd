@@ -82,9 +82,9 @@
   }
 
   .drop-down{
-    width: 22% !important;
+    width: 23% !important;
     min-height: 215px !important;
-    max-height: 500px !important;
+    max-height: 85vh !important;
 
     position: absolute;
     right: 10px;
@@ -139,6 +139,79 @@
   .drop-down ul .menu-theme ul .menu-link:hover{
     border-bottom: 3px solid white;
     border-left: 30px solid white;
+  }
+
+  .notification-list {
+    width: 23% !important;
+    min-height: 215px !important;
+    max-height: 88vh !important;
+
+    position: absolute;
+    left: 28px;
+    top: 60px;
+    z-index: 10;
+    display: none;
+
+    padding: 10px;
+    overflow-y: auto;
+    direction: rtl;
+  }
+
+  .notification-list .triangle-up {
+     width: 0;
+     height: 0;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     border-bottom: 30px solid rgba(80, 15, 187, 1);
+     position: absolute;
+     top: -15px;
+     right: 0px;
+  }
+
+  .notification-list .adds{
+    width: 100%;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .notification-list .adds p{
+    color: red;
+    font-size: 14px;
+    position: relative;
+    top: -50%;
+    right: -40%;
+  }
+
+  .notification-list .adds p:hover{
+    cursor: pointer;
+  }
+
+  .notification-list .adds .icon{
+    width: 15%;
+  }
+
+  .notification-list .adds .icon i{
+    font-size: 20px;
+  }
+
+  .notification-list .adds .title{
+    padding: 2px;
+    width: 100%;
+    line-height: 12px;
+    color: black;
+  }
+
+  .notification-list .adds .date{
+    padding: 2px;
+    width: 100%;
   }
 
 /* Site backgrounds */
