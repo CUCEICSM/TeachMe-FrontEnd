@@ -1,6 +1,7 @@
 body{
   text-align: center;
 }
+
 header{
   width: 100%;
   height: 75px !important;
@@ -8,7 +9,6 @@ header{
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 2%;
 }
 
@@ -61,4 +61,8 @@ main{
 
 .head-btn:hover{
   width: 200px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c9500c46686ff1adcd6b0c0469a565e965ba5e35
