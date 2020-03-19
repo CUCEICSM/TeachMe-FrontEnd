@@ -1,0 +1,252 @@
+body{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header{
+  width: 100%;
+  height: 50px !important;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2%;
+}
+
+header .profile-data{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .profile-data a{
+  text-decoration: none;
+  color: white;
+}
+
+header .profile-data a .prof-pict{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+header .profile-data a .notification{
+  position: relative;
+  color: white;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+header .profile-data a .notification:hover{
+  transform: scale(1.25);
+}
+
+header .profile-data a .notification .noti-count{
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(80, 15, 187, 1);
+  top: -25%;
+  left: 50%;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  background: white;
+  color: rgba(80, 15, 187, 1);
+}
+
+header .nav{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+header .nav form{
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav form .input-line{
+  width: 75%;
+}
+
+.head-btn{
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  color: white;
+  background: transparent;
+  border: 0;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.head-btn:hover{
+  transform: scale(1.1);
+}
+
+.head-btn:focus{
+  border: 0;
+  outline: none;
+}
+
+main{
+  width: 80%;
+}
+
+main .general-data{
+  width: 100%;
+  margin: 25px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  background: rgba(0, 0, 0, .05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+main .general-data span{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  padding: 5px;
+}
+
+main .general-data .title, main .general-data .resume{
+  width: 75%;
+}
+
+main .general-data .stars, main .general-data .views{
+  width: 12.5%;
+  font-size: 15px !important;
+}
+
+main .general-data .stars i, main .general-data .views i{
+  font-size: 15px;
+}
+
+main .content-article{
+  margin: 25px;
+  font-size: 15px;
+  padding: 10px 25px;
+}
+
+main .content-article h3{
+  margin: 10px 0;
+}
+
+main .content-article p{
+  line-height: 20px;
+}
+
+main .content-article .formula{
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  color: rgba(15, 54, 187, 1);
+}
+
+main .content-article ul{
+  list-style: circle;
+  list-style-position: inside;
+  padding: 15px;
+}
+
+main .content-article ul li{
+  padding: 5px;
+}
+
+main .rate{
+  width: 100%;
+  margin: 25px 25px;
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 5px solid rgba(15, 54, 187, 1);
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+main .rate .stars{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+main .rate .stars h5{
+  width: 100%;
+  text-align: center;
+}
+
+main .rate .stars .star{
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+main .rate .stars .star .print{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .rate .stars .star .print .far{
+  color: black;
+}
+
+main .rate .stars .star .left-half{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+
+main .rate .stars .star .rigth-half{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 5;
+}
+
+main .rate .actions button{
+  font-size: 14px;
+}
+
+aside{
+  width: 20%;
+}
