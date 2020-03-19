@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/grid.css">
     <link  rel="icon" href="img/logoAB.png" type="image/png">
-    <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/sortable.js"></script>
-    <script type="text/javascript" src="js/grid.js"></script>
+    <script type="text/javascript" src="js/grid_users.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
-    <title>TeachMe | Lista de usuarios</title>
+    <title>TeachMe | Lista de publicaciones</title>
   </head>
   <body>
   	<header class="bg-blue">
@@ -32,53 +31,78 @@
       </div>
     </header>
     <main onclick="checkMenu();">
-    	<h1>Lista de usuarios</h1>
+    	<h1>Lista de publicaciones</h1>
     	<form autocomplete="off" action="" method="post" onkeyup="doSearch();">
           <input class="search-bar" id="busqUsuario" type="text" name="" value="" placeholder="Buscar usuario">
       </form>
       <div style="overflow-x: auto">
       	<table class="sortable" id="users">
-      		<caption>Desde aquí puedes visitar un perfil, obtener la información de contacto o incluso eliminarlo.</caption>
+      		<caption>Aquí puedes acceder a cualquier publicación. Ver el autor, la cantidad de comentarios, la cantidad de reportes, etc.</caption>
       		<tr>
-  			    <th class="small"><b>ID de usuario</b></th>
-  			    <th>Nombre público</th>
-  			    <th class="small">Fecha de registro</th>
-  			    <th class="small">Publicaciones totales</th>
+  			    <th class="small"><b>ID de publicación</b></th>
+  			    <th>Título</th>
+            <th>Autor</th>
+            <th>Etiquetas</th>
+            <th class="small">Fecha de publicación</th>
+            <th class="small">Rating</th>
+  			    <th class="small">Vistas</th>
   			    <th class="small">No. Comentarios</th>
-            <th class="small">Incidencias</th>
-            <th class="small">Contacto</th>
-  			    <th class="small">Eliminar</th>
+            <th class="small">No. reportes</th>
+  			    <th class="small">Ver reportes</th>
+            <th class="small">Eliminar publicación</th>
   			</tr>
   			<tr>
-  			    <td><a href="#">CuauhFer</a></td>
-  			    <td>Cuauhtli Benavides</td>
-  			    <td>03/03/2020</td>
-  			    <td><b>537</b></td>
-  			    <td>1298</td>
-            <td>7</td>
-            <td><a href="#popupContacto"><button class="btn small" type="button" name="button">Contacto</button></a></td>
+  			    <td><a href="#">143</td>
+            <td>Codificación Huffman</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td>Estructuras de datos 2, Encriptación</td>
+  			    <td>06/03/2020</td>
+  			    <td><span class="stars"><i class="fas fa-star star"></i> 4.2 </span></td>
+            <td>1290</td>
+            <td>184</td>
+            <td>2</td>
+            <td><a href="#popupReports"><button class="btn small" type="button" name="button">Ver reportes</button></a></td>
   			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
   			</tr>
   			<tr>
-  			    <td><a href="#">AlexBar</a></td>
-  			    <td>Alejandro Barrera</td>
-  			    <td>03/03/2020</td>
-  			    <td><b>4</b></td>
-  			    <td>1973</td>
-            <td>10</td>
-            <td><a href="#popupContacto"><button class="btn small" type="button" name="button">Contacto</button></a></td>
-  			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+  			    <td><a href="#">208</td>
+            <td>Susesión de Fibonacci iterativo</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td>Programación</td>
+            <td>06/03/2020</td>
+            <td><span class="stars"><i class="fas fa-star star"></i> 4.6 </span></td>
+            <td>291</td>
+            <td>15</td>
+            <td>0</td>
+            <td><a href="#"><button class="btn small" type="button" name="button">Ver reportes</button></a></td>
+            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
   			</tr>
   			<tr>
-  			    <td><a href="#">JulioMor</a></td>
-  			    <td>Julio Morales</td>
-  			    <td>03/03/2020</td>
-  			    <td><b>678</b></td>
-  			    <td>29</td>
-            <td>42</td>
-            <td><a href="#popupContacto"><button class="btn small" type="button" name="button">Contacto</button></a></td>
-  			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+  			    <td><a href="#">567</td>
+            <td>Entrenamiento de una neurona (Perceptrón)</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td>Inteligencia Artificial</td>
+            <td>06/03/2020</td>
+            <td><span class="stars"><i class="fas fa-star star"></i> 4.4 </span></td>
+            <td>215</td>
+            <td>9</td>
+            <td>4</td>
+            <td><a href="#"><button class="btn small" type="button" name="button">Ver reportes</button></a></td>
+            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
   			</tr>
+        <tr>
+            <td><a href="#">1003</td>
+            <td>Algoritmo de busqueda heuristica voraz primero el mejor</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td>Inteligencia Artificial, Grafos, Heurística</td>
+            <td>06/03/2020</td>
+            <td><span class="stars"><i class="fas fa-star star"></i> 4.8 </span></td>
+            <td>1790</td>
+            <td>97</td>
+            <td>1</td>
+            <td><a href="#"><button class="btn small" type="button" name="button">Ver reportes</button></a></td>
+            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+        </tr>
       	</table>
       </div>
     </main>
@@ -95,7 +119,7 @@
         </li>
         <li class="menu-theme">TeachMe
           <ul>
-            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
+            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catálogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
             <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
@@ -115,23 +139,16 @@
   </body>
 
   <!-- PopUps -->
-	<div id="popupContacto" class="overlay">
-		<div id="openPopup">
-			<h2>Contacto</h2>
-		       <a id="closePopup" href="#">&times;</a>
-		       <div>
-		          <p>Información de contacto</p>
-		       </div>
-		</div>
-	</div>
-   <div id="popupDelete" class="overlay">
+  <div id="popupDelete" class="overlay">
 		<div id="openPopup">
 			<h2>¡Atención!</h2>
-		       <a id="closePopup" href="#">&times;</a>
-		       <div>
-		          <p>¿Está seguro que desea eliminar este perfil?</p>
-		          <button class="btn small" type="button" name="button">¡Seguro!</button>
-		       </div>
+		  <a id="closePopup" href="#">&times;</a>
+		  <div>
+		    <p>
+          ¿Está seguro que desea la publicación?<br>
+        </p>
+		    <button class="btn small" type="button" name="button">¡Seguro!</button>
+		  </div>
 		</div>
-	</div>
+  </div>
 </html>

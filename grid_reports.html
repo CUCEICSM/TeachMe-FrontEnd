@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/grid.css">
     <link  rel="icon" href="img/logoAB.png" type="image/png">
-    <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/sortable.js"></script>
-    <script type="text/javascript" src="js/grid.js"></script>
+    <script type="text/javascript" src="js/grid_users.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
-    <title>TeachMe | Lista de usuarios</title>
+    <title>TeachMe | Lista de reportes</title>
   </head>
   <body>
   	<header class="bg-blue">
@@ -32,52 +31,56 @@
       </div>
     </header>
     <main onclick="checkMenu();">
-    	<h1>Lista de usuarios</h1>
+    	<h1>Lista de reportes</h1>
     	<form autocomplete="off" action="" method="post" onkeyup="doSearch();">
           <input class="search-bar" id="busqUsuario" type="text" name="" value="" placeholder="Buscar usuario">
       </form>
       <div style="overflow-x: auto">
       	<table class="sortable" id="users">
-      		<caption>Desde aquí puedes visitar un perfil, obtener la información de contacto o incluso eliminarlo.</caption>
+      		<caption>Puedes ver todos los reportes realizados y los vínculos al comentario o la publicación reportada. Además de ver tanto el perfil del usuario reportado, como el que reporta.</caption>
       		<tr>
-  			    <th class="small"><b>ID de usuario</b></th>
-  			    <th>Nombre público</th>
-  			    <th class="small">Fecha de registro</th>
-  			    <th class="small">Publicaciones totales</th>
-  			    <th class="small">No. Comentarios</th>
-            <th class="small">Incidencias</th>
-            <th class="small">Contacto</th>
-  			    <th class="small">Eliminar</th>
+  			    <th class="small"><b>ID de reporte</b></th>
+  			    <th class="small">Fecha de reporte</th>
+  			    <th class="small">Reporto</th>
+  			    <th class="small">Reportado</th>
+  			    <th class="small">Tipo de contenido</th>
+            <th>Razón del reporte</th>
+            <th class="small">Ver contenido</th>
+  			    <th class="small">Eliminar contenido</th>
+            <th class="small">Resolver reporte</th>
   			</tr>
   			<tr>
-  			    <td><a href="#">CuauhFer</a></td>
-  			    <td>Cuauhtli Benavides</td>
-  			    <td>03/03/2020</td>
-  			    <td><b>537</b></td>
-  			    <td>1298</td>
-            <td>7</td>
-            <td><a href="#popupContacto"><button class="btn small" type="button" name="button">Contacto</button></a></td>
+  			    <td><b>1</b></td>
+  			    <td>07/03/2020</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td><a href="#">AlexBar</a></td>
+  			    <td>Comentario</td>
+  			    <td>Vocabulario ofensivo</td>
+            <td><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
   			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+            <td><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
   			</tr>
   			<tr>
-  			    <td><a href="#">AlexBar</a></td>
-  			    <td>Alejandro Barrera</td>
-  			    <td>03/03/2020</td>
-  			    <td><b>4</b></td>
-  			    <td>1973</td>
-            <td>10</td>
-            <td><a href="#popupContacto"><button class="btn small" type="button" name="button">Contacto</button></a></td>
-  			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+  			    <td><b>213</b></td>
+            <td>18/03/2020</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td><a href="#">JulioMor</a></td>
+            <td>Publicación</td>
+            <td>Contenido erróneo</td>
+            <td><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
+            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+            <td><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
   			</tr>
   			<tr>
-  			    <td><a href="#">JulioMor</a></td>
-  			    <td>Julio Morales</td>
-  			    <td>03/03/2020</td>
-  			    <td><b>678</b></td>
-  			    <td>29</td>
-            <td>42</td>
-            <td><a href="#popupContacto"><button class="btn small" type="button" name="button">Contacto</button></a></td>
-  			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+  			    <td><b>1112</b></td>
+            <td>10/03/2020</td>
+            <td><a href="#">CuauhFer</a></td>
+            <td><a href="#">AlexBar</a></td>
+            <td>Publicación</td>
+            <td>Plagio</td>
+            <td><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
+            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+            <td><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
   			</tr>
       	</table>
       </div>
@@ -95,7 +98,7 @@
         </li>
         <li class="menu-theme">TeachMe
           <ul>
-            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
+            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catálogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
             <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
@@ -115,23 +118,29 @@
   </body>
 
   <!-- PopUps -->
-	<div id="popupContacto" class="overlay">
-		<div id="openPopup">
-			<h2>Contacto</h2>
-		       <a id="closePopup" href="#">&times;</a>
-		       <div>
-		          <p>Información de contacto</p>
-		       </div>
-		</div>
-	</div>
-   <div id="popupDelete" class="overlay">
+  <div id="popupDelete" class="overlay">
 		<div id="openPopup">
 			<h2>¡Atención!</h2>
-		       <a id="closePopup" href="#">&times;</a>
-		       <div>
-		          <p>¿Está seguro que desea eliminar este perfil?</p>
-		          <button class="btn small" type="button" name="button">¡Seguro!</button>
-		       </div>
+		  <a id="closePopup" href="#">&times;</a>
+		  <div>
+		    <p>Eliminar el reporte significa que no se tomarán medidas contra ese contenido. <br>
+          Tanto el usuario, así como la publicación/comentario reportados no se verán afectados.<br>
+          ¿Está seguro que desea elimar el reporte?<br>
+        </p>
+		    <button class="btn small" type="button" name="button">¡Seguro!</button>
+		  </div>
 		</div>
-	</div>
+  </div>
+    <div id="popupSolve" class="overlay">
+      <div id="openPopup">
+        <h2>Resolución</h2>
+        <a id="closePopup" href="#">&times;</a>
+        <div>
+          <p>El reporte se marcará como resuelto, lo cual significa que ha sido atendido. <br>
+            ¿Está seguro que desea marcar como resuelto este reporte? <br>
+          </p>
+          <button class="btn small" type="button" name="button">Resolver</button>
+        </div>
+      </div>
+    </div>
 </html>

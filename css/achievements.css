@@ -210,6 +210,7 @@ hr{
   display: none;
   position: fixed;
   border: 10px solid rgba(15, 54, 187, 1);
+  border-radius: 15%;
   background: white;
   margin-top: -100px;
   text-align: left;
@@ -227,9 +228,12 @@ hr{
 display: block;
 }
 
-.achImg-bronze{
+.achImg{
   height: 125px;
   width: 125px;
+  border-radius: 50%;
+}
+.bronze{
   border-radius: 50%;
   border: solid 5px rgb(205, 127, 50);
   box-shadow: 0 0 10px rgba(205, 127, 50, 1);
@@ -275,7 +279,7 @@ display: block;
   box-shadow: 0 0 10px rgba(32, 224, 19, 1);
 }
 
-.achImg-secret{
+.secret{
   height: 125px;
   width: 125px;
   border-radius: 50%;

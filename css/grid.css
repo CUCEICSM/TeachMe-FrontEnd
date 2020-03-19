@@ -113,7 +113,7 @@ header .nav form .input-line{
 .search-bar{
   border-color: rgb(80, 15, 187);
   height: 30px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Roboto';
 }
 
@@ -129,7 +129,7 @@ main h1{
 }
 
 table{
-  width: 90%;
+  width: 100%;
   border-collapse: separate;
   border-spacing: 1px;
   background: rgb(80,15,187);
@@ -144,11 +144,18 @@ th{
   border: 1px solid #000;
   background-color: rgb(80, 15, 187); 
   color: white;
+  width: 20%;
+  position: sticky;
+}
+
+th .small{
+  width: 5%;
 }
 
 td {
-  padding: 5px;
-  text-align: left;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
   border: 1px solid #000;
   background-color: white;
 }
@@ -178,14 +185,20 @@ tr:nth-child(odd) td {
 
 #openPopup{
   width: 45%;
-  padding: 2%;
+  padding: 3%;
   border-radius: 15px;
   box-shadow: 0 0 5px #CCC;
   background: #FFF;
   position: relative;
-  margin: 20% auto;
+  margin: 10% auto;
   transition: all 5s ease-in-out;
+  text-align: center;
 }
+
+#openPopup p{
+  text-align: justify;
+}
+
 
 #closePopup{
   position: absolute;
