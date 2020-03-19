@@ -9,6 +9,7 @@ header{
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+
   padding: 0 2%;
 }
 
@@ -61,4 +62,8 @@ main{
 
 .head-btn:hover{
   width: 200px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d865b0fd2352879a1088e481fe533dd11d600094
