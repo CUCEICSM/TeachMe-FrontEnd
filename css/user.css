@@ -195,7 +195,11 @@ hr{
 
 .post{
   width: 23%;
+<<<<<<< HEAD
   height: 25%;
+=======
+  height: 350px;
+>>>>>>> c9500c46686ff1adcd6b0c0469a565e965ba5e35
   margin: 5px 5px;
 
   background: rgba(0, 0, 0, 0.05);
@@ -304,7 +308,7 @@ hr{
 .post .row-bottom .resume{
   display: inline-block;
   font-size: 12px;
-  height: 58px;
+  height: 75px;
   overflow: hidden;
 }
 
