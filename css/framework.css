@@ -157,15 +157,16 @@
     direction: rtl;
   }
 
-  .notification-list .triangle-up {
+  .triangle-upN {
      width: 0;
      height: 0;
      border-left: 20px solid transparent;
      border-right: 20px solid transparent;
      border-bottom: 30px solid rgba(80, 15, 187, 1);
      position: absolute;
-     top: -15px;
-     right: 0px;
+     top: 8%;
+     left: 22%;
+     display: none;
   }
 
   .notification-list .adds{
@@ -866,4 +867,4 @@ aside .recomends .recomendation .data .subject{
   width: 100%;
   line-height: 12px;
   color: rgba(80, 15, 187, 1);
-} 
+}
