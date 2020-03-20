@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/publication_edit.css">
+
+    <link  rel="icon" href="img/logoAB.png" type="image/png">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script src="./js/editor/editor.js"></script>
+    <script src="./js/editor/header.js"></script>
+    <script src="./js/editor/list.js"></script>
+    <script src="./js/editor/embed.js"></script>
+    <script src="./js/editor/simple_image.js"></script>
+    <script src="./js/editor/checklist.js"></script>
+    <script src="./js/editor/quotes.js"></script>
+    <script src="./js/editor/table.js"></script>
+    <script src="./js/editor/marker.js"></script>
+    <script src="./js/editor/link.js"></script>
+    <script src="./js/editor/inline-code.js"></script>
+    <script src="./js/editor/attaches.js"></script>
+    <script src="./js/editor/code.js"></script>
+    <script src="./js/editor/delimiter.js"></script>
+    <script src="./js/editor/MyMarkerTool.js"></script>
+    
+
+    <title>TeachME | Nueva Publicación</title>
+  </head>
+
+  <body>
+    <header class="bg-blue">
+      <div class="profile-data">
+        <a href="main.html"><div class="logo-sm" title="Inicio">
+          TeachME <img src="img/logoAB.png" class="logo-img">
+        </div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a onclick="toggleNotifications();"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+      </div>
+      <div class="nav">
+        <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
+          <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
+          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <main onclick="checkMenu();">
+      <h1>Nueva Publicación</h1>
+
+      <div class="control">
+        <ul>            
+            <li onclick="InsertBlock('list');"><i class="fas fa-list-ol"></i></li>
+            <li onclick="InsertBlock('checklist');"><i class="fas fa-check-circle"></i></li>
+            <li onclick="InsertBlock('quote');"><i class="fas fa-quote-left"></i></li>
+            <li onclick="InsertBlock('table');"><i class="fas fa-table"></i></li>
+            <li onclick="InsertBlock('linkTool');"><i class="fas fa-link"></i></li>
+            <li onclick="InsertBlock('attaches');"><i class="fas fa-file"></i></li>
+            <li onclick="InsertBlock('code');"><i class="fas fa-code"></i></li>
+            <li onclick="InsertBlock('delimiter');"><i class="fas fa-asterisk"></i></li>
+            
+            
+        </ul>
+        <ul>
+            <li id="saveButton"><i class="fas fa-save"></i></li>
+            <li id="blockButton" onclick="ClearEditor();"><i class="fas fa-ban"></i></li>
+        </ul>
+      </div>
+      <input type="text" class="input-titulo" placeholder="Título">
+
+      <div id="editorjs" class="editor" onfocusout="TellMyIndex();"></div>
+
+      <script src="./js/publication_edit.js"></script>
+      <label>Materia</label><input type="text" placeholder="Materia">
+      <label>Tags</label><input type="text" placeholder="Tags">
+    </main>
+
+    
+
+    <div class="drop-down bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="menu-theme">Usuario
+          <ul>
+            <li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li>
+            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">TeachMe
+          <ul>
+            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
+            <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
+            <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">Administrador
+          <ul>
+            <a href="grid_users.html"><li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li></a>
+            <a href="grid_publications.html"><li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li></a>
+            <a href="grid_reports.html"><li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li></a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="notification-list bg-blue">
+      <div class="triangle-up"></div>
+      <table>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-exclamation"></i></span>
+            <div>
+              <span class="title">Periodo de mantenimiento programado</span>
+              <br>
+              <span class="date">10/03/2020 8:00 AM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-user-plus"></i></span>
+            <div>
+              <span class="title">@alexBar ha comenzado a seguirte</span>
+              <br>
+              <span class="date">18/03/2020 4:48 PM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+            <div>
+              <span class="title">Recibiste un reporte en la publicación: <br> Codificación Huffman</span>
+              <br>
+              <span class="date">18/03/2020 5:09 PM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-quote-right"></i></span>
+            <div>
+              <span class="title">@alexBar te mencionó en un comentario</span>
+              <br>
+              <span class="date">18/03/2020 12:01 PM</span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="adds">
+            <p>X</p>
+            <span class="icon"><i class="fas fa-trash-alt"></i></span>
+            <div>
+              <span class="title">Se ha eliminado tu publicación: <br> Algoritmo Kruskal</span>
+              <br>
+              <span class="date">14/03/2020 12:00 AM</span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
