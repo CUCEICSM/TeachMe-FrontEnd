@@ -1,0 +1,42 @@
+.input-titulo{
+    width: 99%;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.editor{
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: gainsboro;
+    background-color: white;
+    overflow: scroll;
+    
+    max-height: 500px;
+    height: 100%;
+    
+}
+
+.editor h1{
+    color: black;
+}
+.editor h2{
+    color: black;
+}
+.editor h3{
+    color: black;
+}
+.editor h4{
+    color: black;
+}
+.editor h5{
+    color: black;
+}
+.editor h6{
+    color: black;
+}
+
+.cdx-marker {
+    background: rgb(238, 255, 0);
+    padding: 3px 0;
+}
