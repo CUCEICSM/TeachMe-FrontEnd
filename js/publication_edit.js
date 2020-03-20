@@ -9,7 +9,7 @@ class MyTool{
     }
 }
 
-var constIndex = 0;
+var lastIndex = 0;
 
 const editor = new EditorJS({
     holderId: 'editorjs',
@@ -65,14 +65,20 @@ const editor = new EditorJS({
 
 
 
-let sB = document.getElementById("saveButton");
+/*let sB = document.getElementById("saveButton");
 
 sB.addEventListener('click',function(){
     editor.save().then((outputData) =>
     SavePublication(outputData));
-})
+})*/
+
+function SavePublication(){
+    editor.save().then((outputData) =>
+    SavePublication(outputData));
+}
 
 function SavePublication(myData){
+    
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(myData)));
     element.setAttribute('download', "documento.txt");
@@ -83,6 +89,8 @@ function SavePublication(myData){
     element.click();
 
     document.body.removeChild(element);
+    
+    
 }
 
 function ClearEditor(){

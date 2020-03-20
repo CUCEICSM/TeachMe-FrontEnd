@@ -1,7 +1,21 @@
+.topic-tag{
+    display: inline;
+    /*padding-left: 5px;*/
+}
+.topic-tag input{
+    margin: 0px;
+    margin-top: 20px;
+    /*padding: 0%;*/
+    /*width: 49.8%;*/
+    width:43%;
+    
+}
 .input-titulo{
-    width: 99%;
+    width: 100%;
     font-size: 20px;
     font-weight: bolder;
+    margin: 0px;
+    margin-top: 3px;
 }
 
 .editor{
@@ -40,3 +54,34 @@
     background: rgb(238, 255, 0);
     padding: 3px 0;
 }
+
+.editor-conf{
+    /*margin: 10px 20px;*/
+    margin-top: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.editor-conf ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.editor-conf ul li{
+    display: flex;
+    padding: 5px 15px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .botones{
+      text-align: center;
+  }
