@@ -20,7 +20,7 @@
         <a href="main.html"><div class="logo-sm" title="Inicio">
           TeachME <img src="img/logoAB.png" class="logo-img">
         </div></a>
-        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/cuauhfer.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
         <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
       </div>
       <div class="nav">
@@ -32,10 +32,14 @@
       </div>
     </header>
 
-    <main>
+    <main onclick="checkMenu();">
       <section class="general-data">
-        <span class="title"><h3>Algoritmo de busqueda heuristica voraz primero el mejor</h3></span>
-        <span class="subject"><h4>Inteligencia Artificial I</h4></span>
+        <div class="backPresent">
+          <div class="bg-img"></div>
+          <i class="fas fa-file-alt"></i> Articulo
+        </div>
+        <span class="title"><h3>Algoritmo de búsqueda heurística voraz primero el mejor</h3></span>
+        <span class="subject">Inteligencia Artificial I</span>
         <span class="author"><h5>Cuauhtli Fernando</h5></span>
         <span class="date">06/03/2020</span>
         <span class="resume">Descripción del algoritmo heuristico.</span>
@@ -44,7 +48,7 @@
       </section>
 
       <section class="content-article">
-        <h3>Algoritmo de busqueda heuristica voraz primero el mejor</h3>
+        <h3>Algoritmo de búsqueda heurística voraz primero el mejor</h3>
         <p>
           Expande el nodo más cercano al objetivo, asumiendo que probablemente conduzca más rápidamente a la solución. <br>
           La función de evaluación f(n) es la función heurística h(n).
@@ -98,14 +102,57 @@
           <button class="btn danger" type="button" name="button"><i class="fas fa-exclamation-circle"></i> Reportar</button>
         </div>
 
-        <div class="">
-
+        <div class="coments">
+          <button class="btn" type="button" name="button" onclick="toggleComents();">Comentarios</button>
         </div>
       </section>
-
     </main>
 
     <aside>
+      <section class="related-by-author">
+        <h5>El autor también publicó: </h5>
+        <div class="post"><i class="fab fa-youtube"></i> Video</div>
+        <div class="post"><i class="fas fa-chalkboard-teacher"></i> Ejercicio</div>
+        <div class="post"><i class="fas fa-file-signature"></i> Ejemplo</div>
+        <div class="post"><i class="fas fa-file-pdf"></i> Documento</div>
+      </section>
+
+      <section class="recomends">
+        <h5>Similar a este articulo</h5>
+
+        <div class="recomendation">
+          <div class="icon">
+            <i class="fas fa-file-alt"></i>
+            <span class="stars"><i class="fas fa-star star"></i> 4.1</span>
+          </div>
+          <div class="data">
+            <span class="title">Algoritmo busqueda coste uniforme</span>
+            <span class="subject">Inteligencia Artificial I</span>
+          </div>
+        </div>
+
+        <div class="recomendation">
+          <div class="icon">
+            <i class="fas fa-file-signature"></i>
+            <span class="stars"><i class="fas fa-star star"></i> 4.6</span>
+          </div>
+          <div class="data">
+            <span class="title">Algoritmo busqueda A*</span>
+            <span class="subject">Inteligencia Artificial I</span>
+          </div>
+        </div>
+
+        <div class="recomendation">
+          <div class="icon">
+            <i class="fab fa-youtube"></i>
+            <span class="stars"><i class="fas fa-star star"></i> 4.9</span>
+          </div>
+          <div class="data">
+            <span class="title">Comparación de algoritmos heurísticos</span>
+            <span class="subject">Inteligencia Artificial I</span>
+          </div>
+        </div>
+      </section>
 
     </aside>
 
@@ -137,6 +184,24 @@
         </li>
       </ul>
 
+    </div>
+
+    <div class="drop-down-coments bg-blue">
+      <div class="coments">
+        <h6>Comentarios <i class="fas fa-times" title="Cerrar" onclick="toggleComents();"></i></h6>
+        <ul>
+          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Para mejor comprensión se sugiere ver la publicación de ejemplo.</span> </li>
+          <li><span class="user">@Usuario1 <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">¿Como saber cual es la función H(n)?</span> </li>
+          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Dependera de tu ejercicio, por ejemplo, si usas un mapa podria ser la distancia en linea recta.</span> </li>
+          <li><span class="user">@Usuario1 <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">¿En un problema como el cuadrado mágico?</span> </li>
+          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Podrias usar el total de números colocados de manera incorrecta, entonces H(n) será más pequeño mientras tengas más elementos correctos.</span> </li>
+          <li><span class="user">@Usuario34 <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Yo la verdad sigo sin entender :(</span> </li>
+        </ul>
+
+        <div class="addComent">
+          <input type="text" name="" value=""><button class="send auxiliary btn" type="button" name="button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

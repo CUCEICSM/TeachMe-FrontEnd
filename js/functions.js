@@ -1,5 +1,7 @@
 var vista = "grid";
 var menuView = false;
+var notiView = false;
+var comentView = false;
 
 function listView(){
   if(vista == "grid"){
@@ -50,8 +52,11 @@ function gridView(){
 function checkMenu(){
   if(menuView == true){
     $('.drop-down').hide(300);
-    $('.notification-list').hide(300);
     menuView = false;
+  }
+  if(notiView == true){
+    $('.notification-list').hide(300);
+    notiView = false;
   }
 }
 
@@ -59,6 +64,10 @@ function toggleMenu(){
   if(menuView == false){
     $('.drop-down').show(300);
     menuView = true;
+    $('.notification-list').hide(300);
+    notiView = false;
+    $('.drop-down-coments').hide(300);
+    comentView = false;
   }
   else{
     $('.drop-down').hide(300);
@@ -67,12 +76,31 @@ function toggleMenu(){
 }
 
 function toggleNotifications(){
-  if(menuView == false){
+  if(notiView == false){
     $('.notification-list').show(300);
-    menuView = true;
+    notiView = true;
+    $('.drop-down').hide(300);
+    menuView = false;
+    $('.drop-down-coments').hide(300);
+    comentView = false;
   }
   else{
     $('.notification-list').hide(300);
+    notiView = false;
+  }
+}
+
+function toggleComents(){
+  if(comentView == false){
+    $('.drop-down-coments').show(300);
+    comentView = true;
+    $('.drop-down').hide(300);
     menuView = false;
+    $('.notification-list').hide(300);
+    notiView = false;
+  }
+  else{
+    $('.drop-down-coments').hide(300);
+    comentView = false;
   }
 }

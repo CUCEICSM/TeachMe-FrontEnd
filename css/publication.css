@@ -2,7 +2,7 @@ body{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 header{
@@ -114,7 +114,7 @@ main{
 }
 
 main .general-data{
-  width: 100%;
+  width: 95%;
   margin: 25px;
   padding: 25px;
   display: flex;
@@ -123,22 +123,59 @@ main .general-data{
   flex-flow: row wrap;
   background: rgba(0, 0, 0, .05);
   border: 1px solid rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+main .general-data .backPresent{
+  position: absolute;
+  height: 100%;
+  width: 32%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-flow: column wrap;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+main .general-data .backPresent .bg-img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  background-image: url('../img/subjects/inteligencia artificial I.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .general-data .backPresent i{
+  font-size: 40px;
 }
 
 main .general-data span{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 25%;
+  width: 30%;
+  color: white;
   padding: 5px;
+  position: relative;
+  z-index: 10;
 }
 
 main .general-data .title, main .general-data .resume{
-  width: 75%;
+  width: 70%;
+  color: black
 }
 
 main .general-data .stars, main .general-data .views{
-  width: 12.5%;
+  width: 15%;
   font-size: 15px !important;
 }
 
@@ -182,9 +219,9 @@ main .content-article ul li{
 }
 
 main .rate{
-  width: 100%;
-  margin: 25px 25px;
-  padding: 25px;
+  width: 95%;
+  margin: 25px;
+  padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-top: 5px solid rgba(15, 54, 187, 1);
   background: rgba(0, 0, 0, 0.05);
@@ -195,6 +232,7 @@ main .rate{
 }
 
 main .rate .stars{
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,10 +281,141 @@ main .rate .stars .star .rigth-half{
   z-index: 5;
 }
 
-main .rate .actions button{
-  font-size: 14px;
+main .rate .actions{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-aside{
-  width: 20%;
+main .rate .actions button{
+  font-size: 14px;
+  margin: 5px;
+}
+
+aside .related-by-author{
+  margin: 25px 25px 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+
+aside .related-by-author .post{
+  width: 45%;
+  height: 75px;
+  margin: 5px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+aside .related-by-author .post:hover{
+  transform: scale(1.05);
+  opacity: 0.75;
+}
+
+aside .related-by-author .post i{
+  font-size: 40px;
+  margin: 1px;
+  padding: 1px;
+}
+
+.drop-down-coments{
+  padding: 1px;
+}
+
+.drop-down-coments .coments{
+  width: auto;
+  height: 99.5%;
+  margin: 1px;
+  background: #F0F0F0;
+  position: relative;
+}
+
+.drop-down-coments .coments h6{
+  padding: 10px 0 15px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-down-coments .coments h6 i{
+  cursor: pointer;
+  color: rgba(128, 0, 0, 1);
+}
+
+.drop-down-coments .coments ul{
+  padding: 5px;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+
+.drop-down-coments .coments li{
+  text-align: left;
+  background: rgba(15, 54, 187, 0.05);
+  border: 1px solid rgba(15, 54, 187, 0.15);
+  padding: 5px;
+  margin: 1px;
+}
+
+.drop-down-coments .coments li span{
+  width: 100%;
+  text-align: left;
+}
+
+.drop-down-coments .coments li .user{
+  color: rgba(15, 54, 187, 1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-down-coments .coments li:hover > .user i{
+  display: inline-block;
+}
+
+.drop-down-coments .coments li i{
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+}
+
+.drop-down-coments .addComent{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-down-coments .addComent input{
+  width: 90%;
+  margin: 15px;
+}
+
+.drop-down-coments .addComent .btn{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 15px;
+}
+
+.drop-down-coments .addComent .btn:focus{
+  outline: none;
 }

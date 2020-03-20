@@ -144,74 +144,109 @@
   .notification-list {
     width: 23% !important;
     min-height: 215px !important;
-    max-height: 88vh !important;
+    max-height: 85vh !important;
 
     position: absolute;
-    left: 28px;
+    left: 30px;
     top: 60px;
     z-index: 10;
     display: none;
 
-    padding: 10px;
-    overflow-y: auto;
-    direction: rtl;
+    padding: 5px;
   }
 
   .notification-list .triangle-up {
-     width: 0;
-     height: 0;
-     border-left: 20px solid transparent;
-     border-right: 20px solid transparent;
-     border-bottom: 30px solid rgba(80, 15, 187, 1);
-     position: absolute;
-     top: -15px;
-     right: 0px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid rgba(80, 15, 187, 1);
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    z-index: -1;
+  }
+
+  .notification-list ul{
+    background: #F0F0F0;
+    height: 99.5%;
+    width: auto;
+    padding: 1px;
   }
 
   .notification-list .adds{
-    width: 100%;
-    font-size: 14px;
-    background-color: white;
+    font-size: 12px;
     color: black;
-    border: 1px solid rgba(0, 0, 0, 1);
-    padding: 10px;
-    margin-top: 5px;
+    padding: 3px;
+    margin: 3px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
+    background: rgba(15, 54, 187, 0.05);
+    border: 1px solid rgba(15, 54, 187, 0.15);
   }
 
   .notification-list .adds p{
     color: red;
-    font-size: 14px;
-    position: relative;
-    top: -50%;
-    right: -40%;
-  }
-
-  .notification-list .adds p:hover{
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
     cursor: pointer;
   }
 
+  .notification-list .adds p i{
+    margin: 3px 5px;
+    padding: 0;
+  }
+
   .notification-list .adds .icon{
-    width: 15%;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .notification-list .adds .icon i{
     font-size: 20px;
   }
 
+  .notification-list .adds div{
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    padding: 5px;
+  }
+
   .notification-list .adds .title{
     padding: 2px;
     width: 100%;
-    line-height: 12px;
     color: black;
+    text-align: left;
   }
 
   .notification-list .adds .date{
+    text-align: right;
     padding: 2px;
     width: 100%;
+    color: rgba(15, 54, 187, 1);
+  }
+
+  .drop-down-coments{
+    width: 23% !important;
+    min-height: 215px !important;
+    max-height: 85vh !important;
+
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    z-index: 10;
+    display: none;
+
+    padding: 10px;
   }
 
 /* Site backgrounds */
@@ -866,4 +901,4 @@ aside .recomends .recomendation .data .subject{
   width: 100%;
   line-height: 12px;
   color: rgba(80, 15, 187, 1);
-} 
+}

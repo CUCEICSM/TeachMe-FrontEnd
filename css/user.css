@@ -290,12 +290,14 @@ hr{
 }
 
 .post .row-bottom .author{
+  width: 100%;
   display: inline-block;
   color: rgba(15, 54, 187, 0.75);
   font-size: 12px;
 }
 
 .post .row-bottom .subject{
+  width: 100%;
   display: inline-block;
   color: rgba(80, 15, 187, 0.75);
   font-size: 12px;
