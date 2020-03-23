@@ -93,3 +93,63 @@ function rateStar(stars){
     stars = stars - 0.5;
   }
 }
+
+function postArticle(){
+  $('.general-data .backPresent .logo').html('<i class="fas fa-file-alt"></i> Articulo');
+  $('.content-article').fadeIn(0);
+  $('.content-video').fadeOut(0);
+  $('.content-excercise').fadeOut(0);
+  $('.content-example').fadeOut(0);
+  $('.content-document').fadeOut(0);
+  $('.post').fadeIn(0);
+  $('#article').fadeOut(0);
+}
+
+function postVideo(){
+  $('.general-data .backPresent .logo').html('<i class="fab fa-youtube"></i>Video');
+  $('.content-article').fadeOut(0);
+  $('.content-video').fadeIn(0);
+  $('.content-excercise').fadeOut(0);
+  $('.content-example').fadeOut(0);
+  $('.content-document').fadeOut(0);
+  $('.post').fadeIn(0);
+  $('#video').fadeOut(0);
+}
+
+function postExcercise(){
+  $('.general-data .backPresent .logo').html('<i class="fas fa-chalkboard-teacher"></i> Ejercicio');
+  $('.content-article').fadeOut(0);
+  $('.content-video').fadeOut(0);
+  $('.content-excercise').fadeIn(0);
+  $('.content-example').fadeOut(0);
+  $('.content-document').fadeOut(0);
+  $('.post').fadeIn(0);
+  $('#excercise').fadeOut(0);
+}
+
+function postExample(){
+  $('.general-data .backPresent .logo').html('<i class="fas fa-file-signature"></i> Ejemplo');
+  $('.content-article').fadeOut(0);
+  $('.content-video').fadeOut(0);
+  $('.content-excercise').fadeOut(0);
+  $('.content-example').fadeIn(0);
+  $('.content-document').fadeOut(0);
+  $('.post').fadeIn(0);
+  $('#example').fadeOut(0);
+}
+
+function postDocument(){
+  $('.general-data .backPresent .logo').html('<i class="fas fa-file-pdf"></i> Documento');
+  $('.content-article').fadeOut(0);
+  $('.content-video').fadeOut(0);
+  $('.content-excercise').fadeOut(0);
+  $('.content-example').fadeOut(0);
+  $('.content-document').fadeIn(0);
+  $('.post').fadeIn(0);
+  $('#document').fadeOut(0);
+}
+
+function visorChange(url){
+  console.log(url);
+  $('.visor .screen img').attr("src",url);
+}

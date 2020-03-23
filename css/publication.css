@@ -154,6 +154,15 @@ main .general-data .backPresent .bg-img{
   background-size: cover;
 }
 
+main .general-data .backPresent .logo{
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  font-family: 'Roboto';
+}
+
 main .general-data .backPresent i{
   font-size: 40px;
 }
@@ -183,21 +192,22 @@ main .general-data .stars i, main .general-data .views i{
   font-size: 15px;
 }
 
-main .content-article{
+main .content-article, .content-video, .content-excercise, .content-example, .content-document{
   margin: 25px;
   font-size: 15px;
   padding: 10px 25px;
 }
 
-main .content-article h3{
+main h3{
   margin: 10px 0;
 }
 
-main .content-article p{
+main p{
   line-height: 20px;
+  margin: 15px 0;
 }
 
-main .content-article .formula{
+main .formula{
   display: block;
   font-size: 18px;
   font-style: italic;
@@ -208,14 +218,90 @@ main .content-article .formula{
   color: rgba(15, 54, 187, 1);
 }
 
-main .content-article ul{
+main ul{
   list-style: circle;
   list-style-position: inside;
   padding: 15px;
 }
 
-main .content-article ul li{
+main ol{
+  list-style: decimal;
+  list-style-position: inside;
+  padding: 15px;
+}
+
+main ul li{
   padding: 5px;
+}
+
+main  .description{
+  width: 640px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.75);
+  margin: 5px auto;
+}
+
+main  iframe{
+  margin: 0 auto;
+  width: 640px;
+  height: 360px;
+}
+
+main a{
+  text-decoration: none;
+}
+
+main .visor{
+  width: 100%;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .visor ul{
+  padding: 5px 5px;
+  height: 100%;
+  width: 20%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  overflow-y: scroll;
+}
+
+main .visor ul li{
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 5px;
+}
+
+main .visor ul li img{
+  width: 100%;
+  height: 100px;
+  image-resolution: snap;
+  cursor: pointer;
+  padding: 5px;
+}
+
+main .visor .screen{
+  width: 80%;
+  height: 100%;
+  padding: 25px;
+}
+
+main .visor .screen img{
+  width: 100%;
+  height: 100%;
+  image-resolution: snap;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 main .rate{

@@ -36,7 +36,9 @@
       <section class="general-data">
         <div class="backPresent">
           <div class="bg-img"></div>
-          <i class="fas fa-file-alt"></i> Articulo
+          <div class="logo">
+            <i class="fas fa-file-alt"></i>Articulo
+          </div>
         </div>
         <span class="title"><h3>Algoritmo de búsqueda heurística voraz primero el mejor</h3></span>
         <span class="subject">Inteligencia Artificial I</span>
@@ -61,6 +63,78 @@
           </ul>
           Al igual que los otros métodos estudiados es necesario verificar los “callejones sin salidas” (no expandir estados repetidos).
         </p>
+      </section>
+
+      <section class="content-video">
+        <h3>Algoritmo de búsqueda heurística voraz primero el mejor</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/emnqVhZ8TT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="description">
+          Video de ejemplo explicado paso a paso de las busqueda voraz primero el mejor <br>
+          <ul>
+            <li>0:00: Explicación del algoritmo</li>
+            <li>1:20: Inicio del ejemplo</li>
+            <li>3:47: Segundo ejemplo 8-Puzzle</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-excercise">
+        <h3>Ejercicio de busqueda voraz primero el mejor</h3>
+        <p>
+          Para aplicar los conocimientos adquiridos se proponen los siguientes ejercicios a resolver:
+          <ol>
+            <li>Viajar de Arad a Bucharest</li>
+            <li>Viajar de Timisoara a Bucharest</li>
+            <li>Viajar de Giurgiu a Oradea</li>
+          </ol>
+        </p>
+        <div class="visor">
+          <ul>
+            <li>Mapa<img src="img/publications/map.png" alt="Mapa" title="Mapa" onclick="visorChange('img/publications/map.png');"></li>
+            <li>Tabla H(n)<img src="img/publications/table.png" alt="H(n)" title="H(n)" onclick="visorChange('img/publications/table.png');"></li>
+          </ul>
+          <div class="screen">
+            <img src="img/publications/map.png" alt="Mapa" title="Mapa">
+          </div>
+        </div>
+
+      </section>
+
+      <section class="content-example">
+        <h3>Ejemplo de una busqueda voraz primero el mejor</h3>
+        <p>
+          Siguiendo las metricas del algoritmo, se realizará el ejercicio de búsqueda comenzando por Arad, hasta llegar a Bucharest, la repetición de nodos queda a elección de cada uno, en este caso se repetiran nodos.
+          <ol>
+            <li>Partimos de Arad, teniendo tres caminos posibles, el costo H(n) más bajo es Sibui con 253, este será nuestro proximo destino.</li>
+            <li>Una vez en Sibui se abren 4 caminos más, entre estos caminos esta Arad, sin embargo, al ser Fagaras el costo más bajo pasaremos a el.</li>
+            <li>Ya en Fagaras se abren 2 nuevos caminos, entre estos Bucharest, nuestro destino final, al tener costo 0, será visitado a continuación.</li>
+            <li>Llegamos a Bucharest, la ruta obtenida es:</li>
+            <span class="formula">Arad > Sibui > Fagaras > Bucharest</span>
+          </ol>
+        </p>
+        <div class="visor">
+          <ul>
+            <li>Paso 1<img src="img/publications/1.png" alt="Mapa" title="Mapa" onclick="visorChange('img/publications/1.png');"></li>
+            <li>Paso 2<img src="img/publications/2.png" alt="H(n)" title="H(n)" onclick="visorChange('img/publications/2.png');"></li>
+            <li>Paso 3<img src="img/publications/3.png" alt="H(n)" title="H(n)" onclick="visorChange('img/publications/3.png');"></li>
+            <li>Paso 4<img src="img/publications/4.png" alt="H(n)" title="H(n)" onclick="visorChange('img/publications/4.png');"></li>
+          </ul>
+          <div class="screen">
+            <img src="img/publications/1.png" alt="Mapa" title="Mapa">
+          </div>
+        </div>
+      </section>
+
+      <section class="content-document">
+        <h3>Presentación explicativa del algoritmo busqueda voraz primero el mejor</h3>
+        <p>
+          En esta presentación se da una breve explicación sobre el algoritmo, su función costo y se proporcionan 2 ejemplos sobre el mismo
+          <ul>
+            <li>Ejemplo con mapa de un conjunto de ciudades</li>
+            <li>Problema de 8-Puzzle</li>
+          </ul>
+        </p>
+        <a class="btn auxiliary big" href="assets/publications/Voraz_primero_mejor.pdf" download="TeachMe_Cuauhfer_VorazPrimeroElMejor"><i class="fas fa-file-pdf"></i>Presentación voraz primero el mejor</a>
       </section>
 
       <section class="rate">
@@ -111,10 +185,11 @@
     <aside>
       <section class="related-by-author">
         <h5>El autor también publicó: </h5>
-        <div class="post"><i class="fab fa-youtube"></i> Video</div>
-        <div class="post"><i class="fas fa-chalkboard-teacher"></i> Ejercicio</div>
-        <div class="post"><i class="fas fa-file-signature"></i> Ejemplo</div>
-        <div class="post"><i class="fas fa-file-pdf"></i> Documento</div>
+        <div id="article" class="post" onclick="postArticle();"><i class="fas fa-file-alt"></i> Articulo</div>
+        <div id="video" class="post" onclick="postVideo();"><i class="fab fa-youtube"></i> Video</div>
+        <div id="excercise" class="post" onclick="postExcercise();"><i class="fas fa-chalkboard-teacher"></i> Ejercicio</div>
+        <div id="example" class="post" onclick="postExample();"><i class="fas fa-file-signature"></i> Ejemplo</div>
+        <div id="document" class="post" onclick="postDocument();"><i class="fas fa-file-pdf"></i> Documento</div>
       </section>
 
       <section class="recomends">
@@ -202,4 +277,8 @@
       </div>
     </div>
   </body>
+
+  <script type="text/javascript">
+    postArticle();
+  </script>
 </html>
