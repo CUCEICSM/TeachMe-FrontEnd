@@ -1,3 +1,4 @@
+/*-----------------------------------------Materia | Tags-------------------------------------------------*/
 .topic-tag{
     display: inline;
     /*padding-left: 5px;*/
@@ -5,30 +6,166 @@
 .topic-tag input{
     margin: 0px;
     margin-top: 20px;
-    /*padding: 0%;*/
-    /*width: 49.8%;*/
     width:43%;
+    margin-bottom: 0px;
     
 }
-.input-titulo{
+
+
+/*--------------------------------------Título publicación-------------------------------------------------------------*/
+.titulo-conf{
+    display: inline-flex;
     width: 100%;
+}
+
+.titulo-conf label{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+.input-titulo{
+    width: 96%;
     font-size: 20px;
     font-weight: bolder;
     margin: 0px;
     margin-top: 3px;
 }
 
+/*------------------------------------Descripción configuración------------------------------------------------------------*/
+.description-conf{
+    display: inline-flex;
+    
+    width: 100%;
+}
+
+.description-conf label{
+    margin-right: 0px;
+    
+}
+.description-conf textarea{
+    width: 96%;
+    margin:0px;
+    font-family: 'Noto Sans', 'Roboto', tahoma;
+    
+}
+
+/*--------------------------------------Divs de publicación-----------------------------------------------*/
+.editors{
+    display: none;
+    width: 100%;
+    align-self: center;
+}
+
+ /*-------------------------------Tipos de publicaciones--------------------------------------------------------------------*/
+ .type-option{
+    display: inline;
+}
+
+.publication-types{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input[type="radio"], input[type="checkbox"]{    
+  display: inline-flex;
+  margin: 0px;
+  background-color: #eee;
+}
+
+.type-option:hover{
+    /*display: inline;
+    background: blueviolet;
+    color: white;
+    border: 4px;
+    border-color: gainsboro;*/
+}
+
+.type-option:active{
+    /*background: black;*/
+}
+
+/* The container */
+.container {
+    display: inline-flex;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-left: 15px;
+
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color:gainsboro;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+/*------------------------------------Editor---------------------------------------------------------------------------------*/
 .editor{
     border-radius: 4px;
     border-style: solid;
     border-width: 3px;
     border-color: gainsboro;
     background-color: white;
-    overflow: scroll;
-    
+    width: 100%;
+     
+}
+
+.article-editor{
     max-height: 500px;
     height: 100%;
-    
+    overflow: scroll;  
 }
 
 .editor h1{
@@ -82,6 +219,152 @@
     overflow: hidden;
   }
 
-  .botones{
-      text-align: center;
+/*---------------------------------Video-----------------------------------------------------------------------------------------*/
+.video-embed{    
+    display: none;
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+}
+
+.upload-option{
+    background-color: white;
+    border-radius: 4px;
+    border-color: gray;
+    border-style: solid;
+    width: 50%;
+    text-align: center;
+}
+
+.upload-option h6{
+    /*text-align: center;*/
+    margin-bottom: 15px;
+}
+.upload-option input{
+    width: 80%;
+}
+
+.upload-option label{
+    width: 100%;
+}
+
+.upload-container{    
+    width: 100%;  
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+/*----------------------------------------Video | Documento-------------------------------------------------*/
+input[type="file"]{
+    display: inline;
+}
+
+h6{
+    margin: 0px;
+    margin-top: 20px;
+}
+/*---------------------------------Check de contenido propio--------------------------------------*/
+.own-content{
+    display: none;
+    margin: 0px;
+    margin-top: 15px;
+    width: 100%;
+    
+}
+
+.own-content label{
+    width: 100%;
+}
+
+.terms-warning{
+    width: 100%;
+    height: 25px;
+    background-color: goldenrod;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: red;
+    font-size: 12px;
+}
+
+/* The container */
+.container-selfcontent {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
+  
+  /* Hide the browser's default checkbox */
+  .container-selfcontent input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark-selfcontent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: gainsboro;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-selfcontent:hover input ~ .checkmark-selfcontent {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-selfcontent input:checked ~ .checkmark-selfcontent {
+    background-color: green;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark-selfcontent:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-selfcontent input:checked ~ .checkmark-selfcontent:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-selfcontent .checkmark-selfcontent:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+ 
+
+/*----------------------------------Botones--------------------------------------------------------------------------------*/
+  .botones{
+      display: none;
+      justify-content: center;
+  }
+
+ 
+
+
+
+
