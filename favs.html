@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/favs.css">
+    <link  rel="icon"   href="img/logoAB.png" type="image/png">
+    <title>TeachME | Mis favoritas</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="profile">
+        <div class="cover"></div>
+        <div class="img" style="background-image: url('img/users/user_profile.jpg')"></div>
+        <div class="nombre">
+          <h1>Nombre público del usuario</h1>
+          <a href="user.html"><h3>@IDUsuario</h3></a>
+          <p>
+            Experiencia 1<br>
+            Experiencia 2<br>
+            Experiencia 3<br>
+          </p>
+        </div>
+        <nav class="navigation">
+          <ul>
+            <a href="main.html"><li>Inicio</li></a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="user">
+        <div class="gen">
+          <h2>Nombre público del usuario</h2>
+          <span class="ranked"><i class="fas fa-star star"></i> 4.7</span>
+        </div>
+
+        <hr>
+        <div class="info">
+          <h5>Usuario desde: 04/03/2020</h5>
+          <p class="description">
+            Había una vez, un pequeño usuario que quería terminar su proyecto modular...</p>
+          <br>
+        </div>
+
+        <h5>7 Publicaciones marcadas como 'favoritas'</h5>
+        <div class="control">
+          <ul>
+            <a onclick=""><li><i class="fas fa-arrow-up row"></i> Fecha</li></a>
+            <a onclick=""><li><i class="fas fa-arrow-up row"></i> Nombre</li></a>
+            <a onclick=""><li><i class="fas fa-arrow-up row"></i> Valoración</li></a>
+            <a onclick=""><li><i class="fas fa-arrow-up row"></i> Vistas</li></a>
+          </ul>
+          <ul>
+            <li onclick="gridView();"><i class="fas fa-th"></i></li>
+            <li onclick="listView();"><i class="fas fa-list"></i></li>
+          </ul>
+        </div>
+
+        <div class="posted">
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/inteligencia artificial I.jpg');">
+              <div class="left">
+                <span class="type"> <i class="fas fa-file-alt"></i> Articulo</span>
+                <span class="stars"><i class="fas fa-star star"></i> 4.8 </span>
+                <span class="views"><i class="fas fa-eye"></i> 1790 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Algoritmo de busqueda heuristica voraz primero el mejor</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Inteligencia Artificial I</span>
+              <span class="resume">Descripción del algoritmo heuristico. </span>
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span>
+              <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/estructura de datos II.jpg');">
+              <div class="left">
+                <span class="type"><i class="fab fa-youtube"></i> Video</span>
+                <span class="stars"><i class="fas fa-star star"></i> 4.2 </span>
+                <span class="views"><i class="fas fa-eye"></i> 1290 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Codificación Huffman</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span></span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Estructuras de datos II</span>
+              <span class="resume">Video con descripción y pasos del algoritmo, ejemplo práctico.</span>
+              <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/programacion.jpg');">
+              <div class="left">
+                <span class="type"><i class="fas fa-chalkboard-teacher"></i> Ejercicio</span>
+                <span class="stars"><i class="fas fa-star star"></i> 4.6 </span>
+                <span class="views"><i class="fas fa-eye"></i> 341 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Sucesión de Fibonnaci iterativo</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Programación</span>
+              <span class="resume">Ejercicio propuesto como refuerzo para el tema de ciclos.</span>
+              <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/inteligencia artificial II.jpg');">
+              <div class="left">
+                <span class="type"><i class="fas fa-file-signature"></i> Ejemplo</span>
+                <span class="stars"><i class="fas fa-star star"></i> 4.4 </span>
+                <span class="views"><i class="fas fa-eye"></i> 215 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Entrenamiento de una neurona (Perceptrón)</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Cuauhtli Fernando</span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Inteligencia Artificial II</span>
+              <span class="resume">Ejemplo paso a paso del entrenamiento de una neurona artificial.</span>
+              <span class="date">06/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/inteligencia artificial II.jpg');">
+              <div class="left">
+                <span class="type"><i class="fas fa-file-alt"></i> Artículo</span>
+                <span class="stars"><i class="fas fa-star star"></i> 3.8 </span>
+                <span class="views"><i class="fas fa-eye"></i> 120 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Algoritmos evolutivos</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Alejandro Barrera</span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Inteligencia Artificial I</span>
+              <span class="resume">Explicación téorica de los algoritmos evolutivos</span>
+              <span class="date">22/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/inteligencia artificial II.jpg');">
+              <div class="left">
+                <span class="type"><i class="fas fa-file-signature"></i> Ejemplo</span>
+                <span class="stars"><i class="fas fa-star star"></i> 4.8 </span>
+                <span class="views"><i class="fas fa-eye"></i> 571 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Algoritmos evolutivos (Ejemplo)</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Alejandro Barrera</span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Inteligencia Artificial I</span>
+              <span class="resume">Ejemplo de un algoritmo evolutivo</span>
+              <span class="date">22/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="img-post row-top" style="background-image: url('img/subjects/programacion.jpg');">
+              <div class="left">
+                <span class="type"><i class="fas fa-file-signature"></i> Ejemplo</span>
+                <span class="stars"><i class="fas fa-star star"></i> 5.0 </span>
+                <span class="views"><i class="fas fa-eye"></i> 7 </span>
+              </div>
+              <div class="right">
+                <h6 class="name">Cifrado de contraseñas para c++</h6>
+              </div>
+            </div>
+            <div class="row-bottom">
+              <span class="author"><i class="fas fa-user"></i> Alejandro Barrera</span>
+              <span class="subject"><i class="fas fa-graduation-cap"></i> Programación</span>
+              <span class="resume">Algoritmo para cifrado de contraseña en interfaz en c++</span>
+              <span class="date">22/03/2020 <button class="btn auxiliary xsmall" type="button" name="button">Ver</button></span>
+              <span class="favs"><i class="fas fa-heart" onclick="selectFav(this);"></i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

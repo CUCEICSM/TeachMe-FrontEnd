@@ -17,7 +17,8 @@ function listView(){
       $(".post .row-top .left .views").remove();
       $(".post .row-top .right .name").prependTo(".post .row-bottom");
       $(".post .row-top .right .name").remove();
-
+      $(".post .row-bottom .favs").appendTo(".post .row-top .right");
+      $(".post .row-bottom .favs").remove();
       $(".post").toggleClass("post-list");
       $(".post").toggleClass("post");
     });
@@ -38,6 +39,8 @@ function gridView(){
       $(".post-list .row-top .right .stars").remove();
       $(".post-list .row-top .right .views").appendTo(".post-list .row-top .left");
       $(".post-list .row-top .right .views").remove();
+      $(".post-list .row-top .right .favs").appendTo(".post-list .row-bottom");
+      $(".post-list .row-top .right .favs").remove();
       $(".post-list .row-bottom .name").prependTo(".post-list .row-top .right");
       $(".post-list .row-bottom .name").remove();
 
@@ -102,5 +105,16 @@ function toggleComents(){
   else{
     $('.drop-down-coments').hide(300);
     comentView = false;
+  }
+}
+
+function selectFav(e){
+  if(e.className == "fas fa-heart"){
+    e.className = "far fa-heart";
+    //Remover de favoritos
+  }
+  else {
+    e.className = "fas fa-heart";
+    //Añadir a favoritos
   }
 }
