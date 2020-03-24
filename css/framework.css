@@ -42,45 +42,6 @@
     position: relative;
   }
 
-  .element-box{
-    width: 1000px;
-    min-height: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    background: rgba(192, 192, 192, 0.25);
-    padding: 25px;
-    margin: 25px;
-  }
-
-  .element-box-vertical{
-    width: 1000px;
-    min-height: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    background: rgba(192, 192, 192, 0.25);
-    padding: 25px;
-    margin: 25px;
-
-    display: flex;
-    flex-flow: column wrap;
-  }
-
-  .element{
-    display: inline-block;
-
-    width: 100%;
-    font-size: 36px;
-    font-weight: bold;
-    color: rgba(80,15,187,1);
-    text-align: center;
-    padding-bottom: 15px;
-  }
-
-  .element-flex{
-    display: flex;
-    flex-flow: row, wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
   .drop-down{
     width: 23% !important;
     min-height: 215px !important;
@@ -140,6 +101,269 @@
     border-bottom: 3px solid white;
     border-left: 30px solid white;
   }
+
+/* Publicaciones */
+  /* Grid */
+
+  .posted{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .post{
+    width: 19%;
+    height: 350px;
+    margin: 10px 0.5%;
+
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .post .row-top{
+    width: 100%;
+    height: 150px;
+
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  .post .img-post{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .post .row-top .favs{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .post .row-top .favs i{
+    margin: 0;
+    padding: 0;
+  }
+
+  .post .row-top .columns{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 5px;
+    color: white;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .post .row-top .columns .type{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .post .row-top .columns .type i{
+    font-size: 32px;
+  }
+
+  .post .row-top .columns .name{
+    height: 70%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .post .row-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+
+  .post .row-bottom .stars, .post .row-bottom .views{
+    width: 50%;
+    height: 25px;
+    font-size: 15px !important;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post .row-bottom .author, .post .row-bottom .subject{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(15, 54, 187, 0.75);
+    font-size: 12px;
+  }
+
+  .post .row-bottom .subject{
+    color: rgba(80, 15, 187, 0.75);
+  }
+
+  .post .row-bottom .resume{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0px 10px;
+    overflow: hidden;
+  }
+
+  .post .row-bottom .date{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba( 15, 96,187, 1);
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .post .row-bottom .date button, .post-list .row-bottom .date button{
+    overflow: hidden;
+  }
+
+  .post .row-bottom .date button, .post-list .row-bottom .date button{
+    transform: none;
+  }
+
+  .post-list{
+    width: 100%;
+    min-height: 75px;
+    margin: 10px;
+
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .post-list .row-top{
+    height: 75px;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  .post-list .row-top .columns{
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+  }
+
+  .post-list .row-top .columns .type{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+
+  .post-list .row-top .columns .type i{
+    font-size: 32px;
+  }
+
+  .post-list .row-bottom{
+    width: 90%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    position: relative;
+  }
+
+  .post-list .row-bottom .favs{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    color: red;
+  }
+
+  .post-list .row-bottom .stars, .post-list .row-bottom .views{
+    display: flex;
+    width: 12.5%;
+  }
+
+  .post-list .row-bottom h6{
+    font-size: 16px;
+    width: 75%;
+  }
+
+  .post-list .row-bottom .date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 25%;
+    color: rgba( 15, 96,187, 1);
+    font-size: 12px;
+  }
+
+  .post-list .row-bottom .date button{
+    margin: 0;
+  }
+
+  .post-list .row-bottom .author, .post-list .row-bottom .subject{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    color: rgba(15, 54, 187, 0.75);
+    width: 75%;
+    font-size: 12px;
+  }
+
+  .post-list .row-bottom .author i, .post-list .row-bottom .subject i{
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-list .row-bottom .subject{
+    color: rgba(80, 15, 187, 0.75);
+  }
+
+  .post-list .row-bottom .resume{
+    display: none;
+  }
+
+/* Notificaciones */
 
   .notification-list {
     width: 23% !important;
@@ -649,19 +873,18 @@
 /* Embeed videos */
 
   iframe{
-  min-width: 360px;
-  min-height: 240px;
+    min-width: 360px;
+    min-height: 240px;
 
-  width: 480px;
-  height: 360px;
+    width: 480px;
+    height: 360px;
 
-  display: flex;
-}
+    display: flex;
+  }
 
 /* Icons */
 
   .star{
-    font-size: 25px;
     color: gold !important;
   }
 
@@ -768,137 +991,137 @@
 
 /* Side bar */
 
-aside{
-  width: 20%;
-}
+  aside{
+    width: 20%;
+  }
 
-aside h5{
-  margin: 30px 0 25px 0;
-  font-size: 15px;
-  text-align: center;
-}
+  aside h5{
+    margin: 30px 0 25px 0;
+    font-size: 15px;
+    text-align: center;
+  }
 
-aside .notice{
-  width: 90%;
-  margin-top: 40px;
-}
+  aside .notice{
+    width: 90%;
+    margin-top: 40px;
+  }
 
-aside .notice .adds{
-  width: 100%;
-  min-height: 40px;
-  margin: 5px;
-  font-size: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 0, 0.05);
+  aside .notice .adds{
+    width: 100%;
+    min-height: 40px;
+    margin: 5px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.05);
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-aside .notice .adds .icon{
-  padding: 20px 0 20px 10px;
-  width: 15%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
+  aside .notice .adds .icon{
+    padding: 20px 0 20px 10px;
+    width: 15%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-aside .notice .adds .icon i{
-  font-size: 20px;
-}
+  aside .notice .adds .icon i{
+    font-size: 20px;
+  }
 
-aside .notice .adds div{
-  width: 85%;
-  padding: 5px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-}
+  aside .notice .adds div{
+    width: 85%;
+    padding: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
 
-aside .notice .adds div .title{
-  padding: 2px;
-  width: 100%;
-  line-height: 12px;
-}
+  aside .notice .adds div .title{
+    padding: 2px;
+    width: 100%;
+    line-height: 12px;
+  }
 
-aside .notice .adds .date{
-  padding: 2px;
-  width: 100%;
-}
+  aside .notice .adds .date{
+    padding: 2px;
+    width: 100%;
+  }
 
-aside .recomends{
-  width: 90%;
-  margin-top: 20px;
-}
+  aside .recomends{
+    width: 90%;
+    margin-top: 20px;
+  }
 
-aside .recomends .recomendation{
-  cursor: pointer;
-  width: 100%;
-  min-height: 40px;
-  margin: 5px;
-  font-size: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 0, 0.05);
+  aside .recomends .recomendation{
+    cursor: pointer;
+    width: 100%;
+    min-height: 40px;
+    margin: 5px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.05);
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 
-aside .recomends .recomendation .icon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-  background: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(0, 0, 0, 0.75);
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  aside .recomends .recomendation .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-aside .recomends .recomendation .icon i{
-  color: white;
-  padding: 10px 0 0 0;
-  font-size: 20px;
-}
+  aside .recomends .recomendation .icon i{
+    color: white;
+    padding: 10px 0 0 0;
+    font-size: 20px;
+  }
 
-aside .recomends .recomendation .icon span{
-  color: white;
-  font-size: 12px;
-}
+  aside .recomends .recomendation .icon span{
+    color: white;
+    font-size: 12px;
+  }
 
-aside .recomends .recomendation .icon span i{
-  color: gold;
-  font-size: 12px;
-}
+  aside .recomends .recomendation .icon span i{
+    color: gold;
+    font-size: 12px;
+  }
 
-aside .recomends .recomendation .data{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 80%;
-}
+  aside .recomends .recomendation .data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 80%;
+  }
 
-aside .recomends .recomendation .data .title{
-  display: inline-block;
-  text-align: center;
-  padding: 5px;
-  width: 100%;
-  line-height: 14px;
-  color: rgba(15, 54, 187, 1);
-}
+  aside .recomends .recomendation .data .title{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    line-height: 14px;
+    color: rgba(15, 54, 187, 1);
+  }
 
-aside .recomends .recomendation .data .subject{
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-  line-height: 12px;
-  color: rgba(80, 15, 187, 1);
-}
+  aside .recomends .recomendation .data .subject{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    line-height: 12px;
+    color: rgba(80, 15, 187, 1);
+  }

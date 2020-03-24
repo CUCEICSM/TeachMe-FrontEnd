@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lacquer|Noto+Sans|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link  rel="icon"   href="img/logoAB.png" type="image/png">
-   
+
     <!--css-->
     <!--<link rel="stylesheet" href="./css/topic_request_form.css">-->
     <link rel="stylesheet" href="./css/framework.css">
@@ -20,32 +20,31 @@
     <script type="text/javascript" src="js/topic_request.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
-    
+
     <title>TeachME | Temas solicitados</title>
 </head>
 <body>
     <header class="bg-blue">
-        <div class="profile-data">
-          <a href="main.html"><div class="logo-sm" title="Inicio">
-            TeachME <img src="img/logoAB.png" class="logo-img">
-          </div></a>
-          <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
-          <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
-        </div>
-        <div class="nav">
-          <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
-            <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
-            <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
-          </form>
-          <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
-        </div>
-      </header>
+      <div class="profile-data">
+        <a href="main.html"><div class="logo-sm" title="Inicio">
+          TeachME <img src="img/logoAB.png" class="logo-img">
+        </div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+      </div>
+      <div class="nav">
+        <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
+          <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
+          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
     <main>
         <h1>Temas Solicitados</h1>
-        <!----------------------------------------------------Popup------------------------------------------------------->
         <div class="popup">
-            <span class="popuptext" id="myPopup">                       
-   
+            <span class="popuptext" id="myPopup">
+
                 <form class="formulario" action="" method="post" autocomplete="off" onsubmit="">
                     <h1>Petición de tema</h1>
                     <label>Materia</label><br>
@@ -54,115 +53,113 @@
                     <label>Tema</label><br>
                     <input type="text" class="input-field" placeholder="Tema...">
                     <br>
-                    
+
                     <button class="btn small" type="submit">Aceptar</button>
                     <button class="btn small" type="button" onclick="openForm()">Cancelar</button>
                 </form>
             </span>
-        </div>   
-        <!----------------------------------------------------Control----------------------------------------------------->
+        </div>
         <div class="control">
-            <ul>              
-              <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>              
+            <ul>
+              <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>
             </ul>
             <ul>
                 <li onclick="openForm();"><i class="fas fa-plus"></i></li>
             </ul>
-          </div> 
+          </div>
         </div>
 
-        <!----------------------------------------------------Temas solicitados------------------------------------------->
         <div class="lista">
-            <div class="card">                                  
+            <div class="card">
                 <h3>Algoritmia</h3>
                 <ul>
                     <li>Recursividad</li>
                     <li>Backtracking</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Estructuras de datos</h3>
                 <ul>
                     <li>Tablas Hash</li>
                     <li>Encriptación</li>
                     <li>Kruskal</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Ingeniería del Software 1</h3>
                 <ul>
                     <li>Diagrama de Gant</li>
                     <li>Diagrama de Pert</li>
                     <li>Manual Técnico</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Traductores de lenguaje</h3>
                 <ul>
                     <li>Operadores aritméticos</li>
                     <li>Espacios de memoria</li>
                     <li>MOV</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Teoría de la computación</h3>
                 <ul>
                     <li>Planetas</li>
                     <li>Operaciones Apriori</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Seguridad de la Información</h3>
                 <ul>
                     <li>Diagrama de Gant</li>
                     <li>Diagrama de Pert</li>
                     <li>Manual Técnico</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Física</h3>
                 <ul>
                     <li>Gravedad</li>
-                </ul>                
+                </ul>
             </div>
-            <div class="card">                                  
+            <div class="card">
                 <h3>Clasificación Inteligente de Datos</h3>
                 <ul>
                     <li>Regresión Polinomial</li>
                     <li>Compilar JADE</li>
-                </ul>                
+                </ul>
             </div>
         </div>
 
-        <div class="drop-down bg-blue">
-          <div class="triangle-up"></div>
-          <ul>
-            <li class="menu-theme">Usuario
-              <ul>
-                <a href="publication_edit.html"><li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li></a>
-                <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
-                <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
-              </ul>
-            </li>
-            <li class="menu-theme">TeachMe
-              <ul>
-                <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
-                <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
-                <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
-                <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
-              </ul>
-            </li>
-            <li class="menu-theme">Administrador
-              <ul>
-                <a href="grid_users.html"><li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li></a>
-                <a href="grid_publications.html"><li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li></a>
-                <a href="grid_reports.html"><li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li></a>
-              </ul>
-            </li>
-          </ul>
-        </div>
     </main>
 
-    
+    <div class="drop-down bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="menu-theme">Usuario
+          <ul>
+            <a href="publication_edit.html"><li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li></a>
+            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">TeachMe
+          <ul>
+            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
+            <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
+            <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
+          </ul>
+        </li>
+        <li class="menu-theme">Administrador
+          <ul>
+            <a href="grid_users.html"><li class="menu-link"><i class="far fa-user"></i> Gestión de usuarios</li></a>
+            <a href="grid_publications.html"><li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li></a>
+            <a href="grid_reports.html"><li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li></a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
 </body>
 </html>

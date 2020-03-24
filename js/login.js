@@ -26,21 +26,6 @@ function showLogin(){
   }
 }
 
-function showAbout(){
-  if(nowYouAreIn != "about"){
-    $('body').removeClass();
-    $('body').addClass('bg-blue');
-
-    $('main').find("section").fadeOut(500);
-    $("#about").fadeIn(500);
-
-    $('.nav ul').find("li").css("text-decoration", "none");
-    $("#link-about").css("text-decoration", "underline");
-
-    nowYouAreIn = "about";
-  }
-}
-
 function showFAQ(){
   if(nowYouAreIn != "faq"){
     $('body').removeClass();

@@ -40,8 +40,10 @@
             <i class="fas fa-file-alt"></i>Articulo
           </div>
         </div>
-        <span class="title"><h3>Algoritmo de búsqueda heurística voraz primero el mejor</h3></span>
-        <span class="subject">Inteligencia Artificial I</span>
+        <span class="title">
+          <h3>Algoritmo de búsqueda heurística voraz primero el mejor</h3>
+        </span>
+        <span class="subject">Inteligencia Artificial I <br> Busquedas heurísticas </span>
         <span class="author"><h5>Cuauhtli Fernando</h5></span>
         <span class="date">06/03/2020</span>
         <span class="resume">Descripción del algoritmo heuristico.</span>
@@ -172,7 +174,7 @@
         </div>
 
         <div class="actions">
-          <button class="btn success" type="button" name="button"><i class="far fa-star"></i> Marcar favorito</button>
+          <button class="btn success" type="button" name="button"  onclick="selectFav(this.firstChild);"><i class="fas fa-heart"></i> Favorito</button>
           <button class="btn danger" type="button" name="button"><i class="fas fa-exclamation-circle"></i> Reportar</button>
         </div>
 
@@ -282,3 +284,4 @@
     postArticle();
   </script>
 </html>
+
