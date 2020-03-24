@@ -1,5 +1,6 @@
 var lastIndex = 0;
 var editorSelected = false;
+var selfContent = false;
 
 const articleEditor = new EditorJS({
     holderId: 'article-editorjs',
@@ -53,13 +54,51 @@ const articleEditor = new EditorJS({
     }
 });
 
+const attachEditor = new EditorJS({
+    holderId: 'attaches-editorjs',
+    placeholder: 'Escribe tus notas del video',
+    tools:{        
+        header:{
+            class: Header
+        },
+        list:{
+            class:List,
+            inlineToolbar: true
+        },
+        embed:{
+            class: Embed
+        },
+        checklist: {
+            class: Checklist,
+            inlineToolbar: true,
+        },
+        quote: Quote,
+        table: {
+            class: Table,
+            inlineToolbar: true
+        },
+        inlineCode: {
+            class: InlineCode,
+            shortcut: 'CMD+SHIFT+C',
+            inlineToolbar: true
+        },
+        code: CodeTool,
+        delimiter: Delimiter,
+        MarkerTool:{
+            class: MarkerTool
+        }
+    }
+});
+
 function DisplayEditor(type){
 
     if(type == "articulo"){
         
         document.getElementById("article-editor").style.display = "inline";
         document.getElementById("video-editor").style.display = "none";
-        document.getElementById("document-editor").style.display = "none";  
+        document.getElementById("document-editor").style.display = "none"; 
+        document.getElementById("attaches-editor").style.display = "none";
+        document.getElementById("images-container").style.display = "inline";
 
         
     }else if(type == "ejercicio"){
@@ -67,25 +106,31 @@ function DisplayEditor(type){
         document.getElementById("article-editor").style.display = "inline";
         document.getElementById("video-editor").style.display = "none";
         document.getElementById("document-editor").style.display = "none";  
-        
+        document.getElementById("attaches-editor").style.display = "none";
+        document.getElementById("images-container").style.display = "inline";
         
     }else if(type == "ejemplo"){
         
         document.getElementById("article-editor").style.display = "inline";
         document.getElementById("video-editor").style.display = "none";
-        document.getElementById("document-editor").style.display = "none";  
-        
+        document.getElementById("document-editor").style.display = "none"; 
+        document.getElementById("attaches-editor").style.display = "none"; 
+        document.getElementById("images-container").style.display = "inline";
         
     }
     else if(type == "video"){
         document.getElementById("article-editor").style.display = "none";
         document.getElementById("video-editor").style.display = "inline";
-        document.getElementById("document-editor").style.display = "none";          
+        document.getElementById("document-editor").style.display = "none";  
+        document.getElementById("attaches-editor").style.display = "inline";      
+        document.getElementById("images-container").style.display = "none";  
         
     }else if(type="document"){
         document.getElementById("article-editor").style.display = "none";
         document.getElementById("video-editor").style.display = "none"; 
         document.getElementById("document-editor").style.display = "inline"; 
+        document.getElementById("attaches-editor").style.display = "inline";
+        document.getElementById("images-container").style.display = "none";
     }
 
     if(!editorSelected){
@@ -140,6 +185,7 @@ function SavePublication(myData){
 
 function ClearEditor(){
     articleEditor.clear();
+    lastIndex = -1;
 
 }
 
@@ -171,4 +217,51 @@ function getId(url) {
     return (match && match[2].length === 11)
       ? match[2]
       : null;
+}
+
+function ShowExternalInput(){
+    if(selfContent){
+        selfContent = false;
+        document.getElementById("external-content").style.display = "inline-flex";
+    }else if(!selfContent){
+        selfContent = true;
+        document.getElementById("external-content").style.display = "none";
+    }
+}
+
+function AddImage(){
+    
+
+    let items_wrapper = document.getElementById("images-items");
+
+    
+    items_wrapper.style.display = "flex";
+    
+
+    let d = document.createElement("div");
+    let l = document.createElement("label");
+    let i = document.createElement("img");
+    let b = document.createElement("i");
+    //i.src = document.getElementById("input-image").value;
+    i.src = "https://www.w3schools.com/images/w3schools_green.jpg";
+    l.innerHTML = document.getElementById("image-description-input").value;
+    b.className += "fas fa-trash";
+    b.addEventListener('click',function(){
+        if(b.parentElement.parentElement.childElementCount == 1){
+            items_wrapper.style.display = "none";
+        }
+        
+        b.parentElement.parentElement.removeChild(b.parentElement);
+        
+    });
+
+    d.appendChild(l);
+    d.appendChild(i);
+    d.appendChild(b);
+
+    d.className += "img-label";
+
+    items_wrapper.appendChild(d);
+
+    
 }

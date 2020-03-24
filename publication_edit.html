@@ -54,22 +54,33 @@
     </header>
 
     <main onclick="checkMenu();">
-      <h1 id="page-title">Nueva Publicación</h1>
 
+      <h1 id="page-title">Nueva Publicación</h1>
       
       <!------------------------------------------------Inputs--------------------------------------->
-      
-      <div class="topic-tag">
-        Materia: <input type="text" placeholder="Materia">
-        Etiquetas: <input type="text" placeholder="Tags">        
+      <div class="conf-input">
+        <label for="input-titulo">Título:</label>
+        <input id="input-titulo" type="text" placeholder="Título...">
       </div>
 
-      <div class="titulo-conf">
-        <label for="input-titulo">Título:</label><input type="text" class="input-titulo" placeholder="Título">
+      <div class="conf-input">
+        <label for="input-materia">Materia:</label>
+        <input id="input-materia" type="text" placeholder="Materia...">
       </div>
+
+      <div class="conf-input">
+        <label for="input-tema">Tema:</label>
+        <input id="input-tema" type="text" placeholder="Tema...">
+      </div>  
       
-      <div class="description-conf">
-        <label for="description">Descripción:</label><textarea id="description" placeholder="Descripción"></textarea><br>
+      <div class="conf-input">
+        <label for="input-tags">Tags:</label>
+        <input id="input-tags" type="text" placeholder="Tags...">
+      </div>      
+      
+      <div class="conf-input">
+        <label for="description">Descripción:</label>
+        <textarea id="description" placeholder="Descripción..."></textarea><br>
       </div>
       
 
@@ -127,6 +138,17 @@
         
       </div>
 
+      <!------------------------------------------------Imágenes--------------------------------->
+      <div id="images-container" class="images-container">
+        <h6>Imagenes</h6>
+        <label for="image-description-input">Descripción:</label>
+        <input type="text" id="image-description-input"/>
+        <input type="file" id="image-input"/>
+        <i class="fas fa-upload" onclick="AddImage();"></i>
+        <div id="images-items" class="images-items"></div>
+      </div>
+
+
       <!-----------------------------------------------Video--------------------------------------------------------------->
       <div id="video-editor" class="editors">
         <h6>Tipo de carga de Video</h6>
@@ -139,14 +161,9 @@
             <label >Link de video (no embed):</label><br>
             <input id="embed-input" type="text" placeholder="Link..."><i class="fa fa-search" onclick="SearchEmbed();"></i><br>          
             <iframe id="video-embed" width="420" height="315"src="" class="video-embed"></iframe>
+          </div>  
+        
           </div>
-  
-          <div id="upload-embed" class="upload-option">
-            <h6>Video propio</h6>
-            <label for="video-uploader">Selecciona un video:</label><br>
-            <input type="file" id="video-uploader" placeholder="Link...">
-          </div>
-        </div>
         
         
       </div>
@@ -154,35 +171,68 @@
       <!-----------------------------------------------Documento--------------------------------------------------------------->
       <div id="document-editor" class="editors">
         <h6>Tipo de carga de Documento</h6>
-        <div id="video-upload-options" class="upload-container">
+        <div id="document-upload-options" class="upload-container">
 
           <div id="link-embed" class="upload-option">
             <h6>Link</h6>
             <label>Link del documento:</label><br>
-            <input id="embed-input" type="text" placeholder="Link..."><i class="fa fa-search" onclick="SearchEmbed();"></i><br>          
-            <iframe id="video-embed" width="420" height="315"src="" class="video-embed"></iframe>
+            <input type="text" placeholder="Link...">
           </div>
   
           <div id="upload-embed" class="upload-option">
             <h6>Documento propio (PDF)</h6>
             
-            <label for="video-uploader">Selecciona documento:</label><br>
-            <input type="file" id="video-uploader" placeholder="Link...">
+            <label for="document-uploader">Selecciona documento:</label><br>
+            <input type="file" id="document-uploader" placeholder="Link...">
             
             
           </div>
         </div>
+
         
+
       </div>
+
+      <!--------------------------------------------------Editor attaches------------------------------------------------------>
+      <div id="attaches-editor" class="editors">
+      <!----------------------------------------------Control editor------------------------------------------->
+      <div class="editor-conf">
+        <ul>            
+            <li onclick="InsertBlock('list');"><i class="fas fa-list-ol"></i></li>
+            <li onclick="InsertBlock('checklist');"><i class="fas fa-check-circle"></i></li>
+            <li onclick="InsertBlock('quote');"><i class="fas fa-quote-left"></i></li>
+            <li onclick="InsertBlock('table');"><i class="fas fa-table"></i></li>
+            <li onclick="InsertBlock('linkTool');"><i class="fas fa-link"></i></li>
+            <li onclick="InsertBlock('attaches');"><i class="fas fa-file"></i></li>
+            <li onclick="InsertBlock('code');"><i class="fas fa-code"></i></li>
+            <li onclick="InsertBlock('delimiter');"><i class="fas fa-asterisk"></i></li>
+        </ul>
+        <ul>
+          <li onclick="ClearEditor();"><i class="fas fa-history"></i></li>
+        </ul>
+      </div>  
+      <!---------------------------------------------Editor------------------------------------>
+      <div id="attaches-editorjs" class="editor article-editor" onfocusout="TellMyIndex();"></div>
+
+      
+    </div>
       
 
 
-      <!-------------------------------------------Contenido propio | de alguie más -------------->
+      <!-------------------------------------------Contenido propio | de alguien más -------------->
       <div id="own-content" class="own-content">
         <label class="container-selfcontent">Este contenido es de mi autoría
-          <input type="checkbox" checked="checked">
+          <input type="checkbox" onclick="ShowExternalInput();">
           <span class="checkmark-selfcontent"></span>
         </label>
+
+        <!-------------------------------Contenido externo----------------------------------->
+        <div id="external-content" class="external-content">
+          <label for="external-content-reference">Referencia:</label>
+          <input type="text">
+        </div>
+        
+        <!-------------------------------Terms warning-->
         <div class="terms-warning">
           <p>TeachME no se hace responsable por el mal uso de contenido propietario.
              Si quieres saber más, te invitamos a leer nuestra sección de <a href="terms.html">términos y condiciones</a>
@@ -200,6 +250,7 @@
 
     
 
+    <!------------------------------------------------Menú global--------------------------------->
     <div class="drop-down bg-blue">
       <div class="triangle-up"></div>
       <ul>
