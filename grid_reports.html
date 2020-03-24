@@ -9,7 +9,7 @@
     <link  rel="icon" href="img/logoAB.png" type="image/png">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/sortable.js"></script>
-    <script type="text/javascript" src="js/grid_users.js"></script>
+    <script type="text/javascript" src="js/grid.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <title>TeachMe | Lista de reportes</title>
   </head>
@@ -31,9 +31,10 @@
       </div>
     </header>
     <main onclick="checkMenu();">
+      <button class="back-btn" type="button" onclick="GoBack();" name="goback">Atrás<i class="fas fa-chevron-circle-left"></i></button>
     	<h1>Lista de reportes</h1>
     	<form autocomplete="off" action="" method="post" onkeyup="doSearch();">
-          <input class="search-bar" id="busqUsuario" type="text" name="" value="" placeholder="Buscar usuario">
+          <input class="search-bar" id="busqUsuario" type="text" name="" value="" placeholder="Buscar...">
       </form>
       <div style="overflow-x: auto">
       	<table class="sortable" id="users">
@@ -44,7 +45,8 @@
   			    <th class="small">Reporto</th>
   			    <th class="small">Reportado</th>
   			    <th class="small">Tipo de contenido</th>
-            <th>Razón del reporte</th>
+            <th>Motivo del reporte</th>
+            <th>Comentario del reporto</th>
             <th class="small">Ver contenido</th>
   			    <th class="small">Eliminar reporte</th>
             <th class="small">Resolver reporte</th>
@@ -56,9 +58,10 @@
             <td><a href="#">AlexBar</a></td>
   			    <td>Comentario</td>
   			    <td>Vocabulario ofensivo</td>
-            <td><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
-  			    <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
-            <td><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
+            <td>Borren ese comentario, por favor</td>
+            <td class="small"><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
+  			    <td class="small"><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+            <td class="small"><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
   			</tr>
   			<tr>
   			    <td><b>213</b></td>
@@ -67,9 +70,10 @@
             <td><a href="#">JulioMor</a></td>
             <td>Publicación</td>
             <td>Contenido erróneo</td>
-            <td><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
-            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
-            <td><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
+            <td>La información está mal. Me reprobaron :(</td>
+            <td class="small"><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
+            <td class="small"><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+            <td class="small"><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
   			</tr>
   			<tr>
   			    <td><b>1112</b></td>
@@ -78,9 +82,10 @@
             <td><a href="#">AlexBar</a></td>
             <td>Publicación</td>
             <td>Plagio</td>
-            <td><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
-            <td><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
-            <td><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
+            <td>Esto lo subí hace una semana</td>
+            <td class="small"><a href="#"><button class="btn small" type="button" name="button">Ver</button></a></td>
+            <td class="small"><a href="#popupDelete"><button class="btn small primary" type="button" name="button">Eliminar</button></a></td>
+            <td class="small"><a href="#popupSolve"><button class="btn small tertiary" type="button" name="button">Resolver</button></a></td>
   			</tr>
       	</table>
       </div>

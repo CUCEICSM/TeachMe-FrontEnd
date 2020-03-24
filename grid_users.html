@@ -32,9 +32,10 @@
       </div>
     </header>
     <main onclick="checkMenu();">
+      <button class="back-btn" type="button" onclick="GoBack();" name="goback">Atrás<i class="fas fa-chevron-circle-left"></i></button>
     	<h1>Lista de usuarios</h1>
     	<form autocomplete="off" action="" method="post" onkeyup="doSearch();">
-          <input class="search-bar" id="busqUsuario" type="text" name="" value="" placeholder="Buscar usuario">
+          <input class="search-bar" id="busqUsuario" type="text" name="" value="" placeholder="Buscar...">
       </form>
       <div style="overflow-x: auto">
       	<table class="sortable" id="users">
