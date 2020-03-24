@@ -30,7 +30,7 @@
         <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
       </div>
     </header>
-    <main onclick="checkMenu();">      
+    <main onclick="checkMenu();">
       <button class="back-btn" type="button" onclick="GoBack();" name="goback">Atrás<i class="fas fa-chevron-circle-left"></i></button>
     	<h1>Lista de publicaciones</h1>
     	<form autocomplete="off" action="" method="post" onkeyup="doSearch();">
@@ -137,7 +137,7 @@
   <div id="popupDelete" class="overlay">
 		<div id="openPopup">
 			<h2>¡Atención!</h2>
-		  <a id="closePopup" href="#">&times;</a>
+		  <a id="closePopup" href="" onclick="GoBack();">&times;</a>
 		  <div>
 		    <p>
           ¿Está seguro que desea eliminar la publicación?<br>
