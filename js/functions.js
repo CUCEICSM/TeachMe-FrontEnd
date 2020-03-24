@@ -110,3 +110,9 @@ function selectFav(e){
     //Añadir a favoritos
   }
 }
+
+function GoBack(){
+  if(history.length == 1)
+    window.close();
+  window.history.back();
+}
