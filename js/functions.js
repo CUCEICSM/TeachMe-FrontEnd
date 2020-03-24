@@ -10,15 +10,11 @@ function listView(){
 
     post.each(function(){
       $(this).appendTo(".posted");
+      $(".post .row-top .favs").appendTo(".post .row-bottom");
+      $(".post .row-top .favs").remove();
+      $(".post .row-top .columns .name").prependTo(".post .row-bottom");
+      $(".post .row-top .columns .name").remove();
 
-      $(".post .row-top .left .stars").appendTo(".post .row-top .right");
-      $(".post .row-top .left .stars").remove();
-      $(".post .row-top .left .views").appendTo(".post .row-top .right");
-      $(".post .row-top .left .views").remove();
-      $(".post .row-top .right .name").prependTo(".post .row-bottom");
-      $(".post .row-top .right .name").remove();
-      $(".post .row-bottom .favs").appendTo(".post .row-top .right");
-      $(".post .row-bottom .favs").remove();
       $(".post").toggleClass("post-list");
       $(".post").toggleClass("post");
     });
@@ -35,13 +31,9 @@ function gridView(){
     post.each(function(){
       $(this).appendTo(".posted");
 
-      $(".post-list .row-top .right .stars").appendTo(".post-list .row-top .left");
-      $(".post-list .row-top .right .stars").remove();
-      $(".post-list .row-top .right .views").appendTo(".post-list .row-top .left");
-      $(".post-list .row-top .right .views").remove();
-      $(".post-list .row-top .right .favs").appendTo(".post-list .row-bottom");
-      $(".post-list .row-top .right .favs").remove();
-      $(".post-list .row-bottom .name").prependTo(".post-list .row-top .right");
+      $(".post-list .row-bottom .favs").appendTo(".post-list .row-top");
+      $(".post-list .row-bottom .favs").remove();
+      $(".post-list .row-bottom .name").appendTo(".post-list .row-top .columns");
       $(".post-list .row-bottom .name").remove();
 
       $(".post-list").toggleClass("post");
