@@ -1,108 +1,117 @@
-body {
-    overflow:auto;
+body{
+  overflow-x: hidden;
 }
 
 h1{
     text-align: center;
 }
 
-.lista{
-	display: grid;
-    grid-template-columns: auto auto auto;
-  
-    padding: 10px;
+main{
+  width: 75% !important;
 }
 
-.lista > div{
-  margin: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+.lista{
+  width: 100%;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 25px;
 }
 
 .card{
-    padding: 20px;  
-    /*text-align: center;*/
-    border-radius: 4px;
-    /*background-color: white;*/
-    background: rgba(0, 0, 0, 0.05);
-    box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    
+    width: 100%;
+    margin: 5px auto;
 }
-
 
 .card ul{
     list-style: none;
     margin-top: 10px;
     margin-left: 10px;
-    
 }
 
 .card h3{
-    text-align: center;
+  padding: 10px 50px 10px 5px;
+  border-left: 0px solid #F0F0F0;
+  border-bottom: 5px solid #F0F0F0;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-a{
-    text-decoration: none;
+.card ul{
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
-.nuevo{
-    align-self: center;
-    text-align: center;
+.card ul li{
+  width: 24%;
+  height: 100px;
+  margin: 0.5%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 5px;
+  position: relative;
 }
 
+.card ul li .solicitudes{
+  width: 100%;
+  font-size: 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
-.popup {
-    position: relative;
-    display: inline-block;
-    /*cursor: pointer;*/
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.03);
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 400px;
-    background-color:whitesmoke;
-    color: #fff;
-    
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    margin-left: 350px;
-    margin-top: 70px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: gray transparent transparent  ;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn .3s;
-    animation: fadeIn .3s;
-  }
-  /* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+.card ul li i{
+  font-size: 24px;
+  margin: 0; padding: 0;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+aside{
+  width: 25%;
+  padding: 25px;
+}
+
+aside form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+aside h2{
+  text-align: center;
+  font-size: 24px;
+}
+
+aside label{
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+aside input{
+  width: 100%;
+}
+
+aside p{
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+aside button{
+  margin: 5px auto !important;
+}

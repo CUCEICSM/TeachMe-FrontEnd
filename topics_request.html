@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,134 +12,120 @@
 
     <!--css-->
     <!--<link rel="stylesheet" href="./css/topic_request_form.css">-->
-    <link rel="stylesheet" href="./css/framework.css">
-    <link rel="stylesheet" href="./css/topic_request.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/PopupForm.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <link rel="stylesheet" href="css/topic_request.css">
+    <link rel="stylesheet" href="css/main.css">
     <!--JavaScript-->
-    <script type="text/javascript" src="js/topic_request.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/topic_request.js"></script>
 
-    <title>TeachME | Temas solicitados</title>
+    <title>TeachME | Solicitar temas</title>
 </head>
 <body>
-    <header class="bg-blue">
-      <div class="profile-data">
-        <a href="main.html"><div class="logo-sm" title="Inicio">
-          TeachME <img src="img/logoAB.png" class="logo-img">
-        </div></a>
-        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
-        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
-      </div>
-      <div class="nav">
-        <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
-          <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
-          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
-        </form>
-        <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
-      </div>
-    </header>
+  <header class="bg-blue">
+    <div class="profile-data">
+      <a href="main.html"><div class="logo-sm" title="Inicio">
+        TeachME <img src="img/logoAB.png" class="logo-img">
+      </div></a>
+      <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div>Username</a>
+      <a onclick="toggleNotifications();"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+    </div>
+    <div class="nav">
+      <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
+        <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
+        <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+      <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
     <main>
-        <h1>Temas Solicitados</h1>
-        <div class="popup">
-            <span class="popuptext" id="myPopup">
-
-                <form class="formulario" action="" method="post" autocomplete="off" onsubmit="">
-                    <h1>Petición de tema</h1>
-                    <label>Materia</label><br>
-                    <input type="text" class="input-field" placeholder="Materia">
-                    <br>
-                    <label>Tema</label><br>
-                    <input type="text" class="input-field" placeholder="Tema...">
-                    <br>
-
-                    <button class="btn small" type="submit">Aceptar</button>
-                    <button class="btn small" type="button" onclick="openForm()">Cancelar</button>
-                </form>
-            </span>
-        </div>
+        <h1>Temas ya solicitados</h1>
         <div class="control">
             <ul>
               <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>
-            </ul>
-            <ul>
-                <li onclick="openForm();"><i class="fas fa-plus"></i></li>
+              <li><i class="fas fa-arrow-up row"></i> Número de solicitudes</li>
             </ul>
           </div>
         </div>
 
         <div class="lista">
             <div class="card">
-                <h3>Algoritmia</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Algoritmia</span> <span><span class="solicitudes">127</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Recursividad</li>
-                    <li>Backtracking</li>
+                    <li>Recursividad <span class="solicitudes">64</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Backtracking <span class="solicitudes">63</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Estructuras de datos</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Estructuras de datos</span> <span><span class="solicitudes">114</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Tablas Hash</li>
-                    <li>Encriptación</li>
-                    <li>Kruskal</li>
+                    <li>Tablas Hash<span class="solicitudes">54</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Encriptación<span class="solicitudes">35</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Kruskal<span class="solicitudes">25</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Ingeniería del Software 1</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Ingeniería del Software 1</span> <span><span class="solicitudes">92</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Diagrama de Gant</li>
-                    <li>Diagrama de Pert</li>
-                    <li>Manual Técnico</li>
+                    <li>Diagrama de Gant<span class="solicitudes">11</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Diagrama de Pert<span class="solicitudes">11</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Manual Técnico<span class="solicitudes">70</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Traductores de lenguaje</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Traductores de lenguaje</span> <span><span class="solicitudes">73</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Operadores aritméticos</li>
-                    <li>Espacios de memoria</li>
-                    <li>MOV</li>
+                    <li>Operadores aritméticos<span class="solicitudes">14</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Espacios de memoria<span class="solicitudes">37</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>MOV<span class="solicitudes">12</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Teoría de la computación</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Teoría de la computación</span> <span><span class="solicitudes">55</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Planetas</li>
-                    <li>Operaciones Apriori</li>
+                    <li>Expresiones regulares<span class="solicitudes">38</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Operaciones Apriori<span class="solicitudes">17</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Seguridad de la Información</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Física</span> <span><span class="solicitudes">36</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Diagrama de Gant</li>
-                    <li>Diagrama de Pert</li>
-                    <li>Manual Técnico</li>
+                    <li>Gravedad<span class="solicitudes">36</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Física</h3>
+                <h3 onclick="toggleList($(this).parent());"><span><i class="fas fa-graduation-cap"></i>Clasificación Inteligente de Datos</span> <span><span class="solicitudes">14</span>  solicitudes</span></h3>
                 <ul>
-                    <li>Gravedad</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Clasificación Inteligente de Datos</h3>
-                <ul>
-                    <li>Regresión Polinomial</li>
-                    <li>Compilar JADE</li>
+                    <li>Regresión Polinomial<span class="solicitudes">12</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
+                    <li>Compilar JADE<span class="solicitudes">2</span>solicitudes <i class="far fa-thumbs-up" title="Añadir solicitud" onclick="addVote($(this).parent());"></i></li>
                 </ul>
             </div>
         </div>
-
     </main>
+
+    <aside>
+      <h2>Agregar un tema</h2>
+      <p>Si el tema que requieres no esta en la lista agregalo aqui</p>
+      <form class="formulario" action="" method="post" autocomplete="off" onsubmit="" onsubmit="event.preventDefault();">
+          <label>Materia</label>
+          <input type="text" class="input-field" placeholder="Materia">
+          <label>Tema</label>
+          <input type="text" class="input-field" placeholder="Tema...">
+
+          <button class="btn auxiliary small" type="submit">Agregar</button>
+      </form>
+    </aside>
 
     <div class="drop-down bg-blue">
       <div class="triangle-up"></div>
       <ul>
         <li class="menu-theme">Usuario
           <ul>
+            <a href="user.html"> <li class="menu-link"><i class="fas fa-user"></i> Perfil de usuario</li> </a>
             <a href="publication_edit.html"><li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li></a>
-            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="favs.html"> <li class="menu-link"><i class="fas fa-heart"></i> Favoritos</li></a>
             <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
           </ul>
         </li>
@@ -147,7 +133,7 @@
           <ul>
             <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
-            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar temas</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
           </ul>
         </li>
@@ -160,6 +146,50 @@
         </li>
       </ul>
     </div>
-
+    <div class="notification-list bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-exclamation"></i></span>
+          <div>
+            <span class="title">Periodo de mantenimiento programado</span>
+            <span class="date">10/03/2020 8:00 AM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-user-plus"></i></span>
+          <div>
+            <span class="title">@AlexBar ha comenzado a seguirte</span>
+            <span class="date">18/03/2020 4:48 PM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <div>
+            <span class="title">Recibiste un reporte en la publicación: <br> Codificación Huffman</span>
+            <span class="date">18/03/2020 5:09 PM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-quote-right"></i></span>
+          <div>
+            <span class="title">@AlexBar te mencionó en un comentario</span>
+            <span class="date">18/03/2020 12:01 PM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-trash-alt"></i></span>
+          <div>
+            <span class="title">Se ha eliminado tu publicación: <br> Algoritmo Kruskal</span>
+            <span class="date">14/03/2020 12:00 AM</span>
+          </div>
+        </li>
+      </ul>
+    </div>
 </body>
 </html>

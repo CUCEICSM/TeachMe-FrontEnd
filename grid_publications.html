@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
     <link  rel="icon" href="img/logoAB.png" type="image/png">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/sortable.js"></script>
@@ -14,13 +15,13 @@
     <title>TeachMe | Lista de publicaciones</title>
   </head>
   <body>
-  	<header class="bg-blue">
+    <header class="bg-blue">
       <div class="profile-data">
         <a href="main.html"><div class="logo-sm" title="Inicio">
           TeachME <img src="img/logoAB.png" class="logo-img">
         </div></a>
-        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
-        <a href="#"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div>Username</a>
+        <a onclick="toggleNotifications();"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
       </div>
       <div class="nav">
         <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
@@ -30,6 +31,7 @@
         <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
       </div>
     </header>
+
     <main onclick="checkMenu();">
       <button class="back-btn" type="button" onclick="GoBack();" name="goback">Atrás<i class="fas fa-chevron-circle-left"></i></button>
     	<h1>Lista de publicaciones</h1>
@@ -108,8 +110,9 @@
       <ul>
         <li class="menu-theme">Usuario
           <ul>
+            <a href="user.html"> <li class="menu-link"><i class="fas fa-user"></i> Perfil de usuario</li> </a>
             <a href="publication_edit.html"><li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li></a>
-            <li class="menu-link"><i class="fas fa-star"></i> Favoritos</li>
+            <a href="favs.html"> <li class="menu-link"><i class="fas fa-heart"></i> Favoritos</li></a>
             <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
           </ul>
         </li>
@@ -117,7 +120,7 @@
           <ul>
             <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
-            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar contenido</li></a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar temas</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
           </ul>
         </li>
@@ -127,6 +130,51 @@
             <a href="grid_publications.html"><li class="menu-link"><i class="fas fa-file-alt"></i> Gestión de publicaciones</li></a>
             <a href="grid_reports.html"><li class="menu-link"><i class="fas fa-exclamation-circle"></i> Atención a reportes</li></a>
           </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="notification-list bg-blue">
+      <div class="triangle-up"></div>
+      <ul>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-exclamation"></i></span>
+          <div>
+            <span class="title">Periodo de mantenimiento programado</span>
+            <span class="date">10/03/2020 8:00 AM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-user-plus"></i></span>
+          <div>
+            <span class="title">@AlexBar ha comenzado a seguirte</span>
+            <span class="date">18/03/2020 4:48 PM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+          <div>
+            <span class="title">Recibiste un reporte en la publicación: <br> Codificación Huffman</span>
+            <span class="date">18/03/2020 5:09 PM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-quote-right"></i></span>
+          <div>
+            <span class="title">@AlexBar te mencionó en un comentario</span>
+            <span class="date">18/03/2020 12:01 PM</span>
+          </div>
+        </li>
+        <li class="adds">
+          <p><i class="fas fa-times" title="Eliminar"></i></p>
+          <span class="icon"><i class="fas fa-trash-alt"></i></span>
+          <div>
+            <span class="title">Se ha eliminado tu publicación: <br> Algoritmo Kruskal</span>
+            <span class="date">14/03/2020 12:00 AM</span>
+          </div>
         </li>
       </ul>
     </div>

@@ -134,7 +134,10 @@ section{
 }
 
 .contact p .email{
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
   text-align: center;
   font-size: 18px;
   width: 100%;
@@ -169,6 +172,18 @@ section{
   display: inline-block;
   width: 70%;
   text-align: left;
+}
+
+.administration .admin .email{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+  font-size: 16px;
+}
+
+.administration .admin .email span{
+  width: auto;
 }
 
 .short-link{
