@@ -22,13 +22,13 @@
         <a href="main.html"><div class="logo-sm" title="Inicio">
           TeachME <img src="img/logoAB.png" class="logo-img">
         </div></a>
-        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div>Username</a>
         <a onclick="toggleNotifications();"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
       </div>
       <div class="nav">
         <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
           <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
-          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+          <a href="search_topic.html"><button class="head-btn" type="button"><i class="fas fa-search"></i></button></a>
         </form>
         <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
       </div>
@@ -231,6 +231,7 @@
       <ul>
         <li class="menu-theme">Usuario
           <ul>
+            <a href="user.html"> <li class="menu-link"><i class="fas fa-user"></i> Perfil de usuario</li> </a>
             <a href="publication_edit.html"><li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li></a>
             <a href="favs.html"> <li class="menu-link"><i class="fas fa-heart"></i> Favoritos</li></a>
             <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
@@ -240,7 +241,7 @@
           <ul>
             <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
-            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Temas solicitados</li></a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar temas</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
           </ul>
         </li>
@@ -253,7 +254,6 @@
         </li>
       </ul>
     </div>
-
     <div class="notification-list bg-blue">
       <div class="triangle-up"></div>
       <ul>

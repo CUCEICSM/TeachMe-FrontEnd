@@ -27,7 +27,7 @@
       <div class="nav">
         <form autocomplete="off" action="" method="post" onsubmit="event.preventDefault();">
           <input class="input-line" id="search" type="text" name="" value="" placeholder="Buscar...">
-          <button class="head-btn" type="submit"><i class="fas fa-search"></i></button>
+          <a href="search_topic.html"><button class="head-btn" type="button"><i class="fas fa-search"></i></button></a>
         </form>
         <button class="head-btn menu-btn" type="button" name="showMenu" onclick="toggleMenu();"><i class="fas fa-bars"></i></button>
       </div>
@@ -175,12 +175,9 @@
         </div>
 
         <div class="actions">
-          <button class="btn success" type="button" name="button"  onclick="selectFav(this.firstChild);"><i class="fas fa-heart"></i> Favorito</button>
-          <button class="btn danger" type="button" name="button"><i class="fas fa-exclamation-circle"></i> Reportar</button>
-        </div>
-
-        <div class="coments">
           <button class="btn" type="button" name="button" onclick="toggleComents();">Comentarios</button>
+          <button class="btn success" type="button" name="button"  onclick="selectFav(this.firstChild);"><i class="fas fa-heart"></i> Favorito</button>
+          <button class="btn danger" type="button" name="button" onclick="showReport('Publicación', 'Algoritmo de búsqueda heurística voraz primero el mejor');"><i class="fas fa-exclamation-circle"></i> Reportar</button>
         </div>
       </section>
     </main>
@@ -311,12 +308,12 @@
       <div class="coments">
         <h6>Comentarios <i class="fas fa-times" title="Cerrar" onclick="toggleComents();"></i></h6>
         <ul>
-          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Para mejor comprensión se sugiere ver la publicación de ejemplo.</span> </li>
-          <li><span class="user">@Usuario1 <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">¿Como saber cual es la función H(n)?</span> </li>
-          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Dependera de tu ejercicio, por ejemplo, si usas un mapa podria ser la distancia en linea recta.</span> </li>
-          <li><span class="user">@Usuario1 <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">¿En un problema como el cuadrado mágico?</span> </li>
-          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Podrias usar el total de números colocados de manera incorrecta, entonces H(n) será más pequeño mientras tengas más elementos correctos.</span> </li>
-          <li><span class="user">@Usuario34 <i class="fas fa-exclamation-circle" title="Reportar"></i></span><span class="coment">Yo la verdad sigo sin entender :(</span> </li>
+          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar" onclick="showReport('Comentario', $(this).parent());"></i></span><span class="coment">Para mejor comprensión se sugiere ver la publicación de ejemplo.</span> </li>
+          <li><span class="user">@Usuario1 <i class="fas fa-exclamation-circle" title="Reportar" onclick="showReport('Comentario', $(this).parent());"></i></span><span class="coment">¿Como saber cual es la función H(n)?</span> </li>
+          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar" onclick="showReport('Comentario', $(this).parent());"></i></span><span class="coment">Dependera de tu ejercicio, por ejemplo, si usas un mapa podria ser la distancia en linea recta.</span> </li>
+          <li><span class="user">@Usuario1 <i class="fas fa-exclamation-circle" title="Reportar" onclick="showReport('Comentario', $(this).parent());"></i></span><span class="coment">¿En un problema como el cuadrado mágico?</span> </li>
+          <li><span class="user">@CuauhFer (Autor) <i class="fas fa-exclamation-circle" title="Reportar" onclick="showReport('Comentario', $(this).parent());"></i></span><span class="coment">Podrias usar el total de números colocados de manera incorrecta, entonces H(n) será más pequeño mientras tengas más elementos correctos.</span> </li>
+          <li><span class="user">@Usuario34 <i class="fas fa-exclamation-circle" title="Reportar" onclick="showReport('Comentario', $(this).parent());"></i></span><span class="coment">Yo la verdad sigo sin entender :(</span> </li>
         </ul>
 
         <div class="addComent">
@@ -324,6 +321,30 @@
         </div>
       </div>
     </div>
+    <div class="drop-down-reports bg-purple">
+      <div class="report">
+        <form class="" action="index.html" method="post" onsubmit="event.preventDefault();">
+
+          <h3>Reportar contenido</h3>
+          <div class="content"></div>
+          <label for="motivo">Motivo</label>
+          <select class="" name="" id="motivo">
+            <option value="">Lenguaje ofensivo o inapropiado</option>
+            <option value="">SPAM</option>
+            <option value="">Contenido poco útil</option>
+            <option value="">Plagio</option>
+            <option value="">Otro motivo</option>
+          </select>
+
+          <label for="descrition">Descripción del problema</label>
+          <textarea id="description" name="description" placeholder="Más información del problema..." required></textarea>
+
+          <button class="btn danger small" type="submit" name="button">Enviar reporte</button>
+          <button class="btn danger small" type="button" name="button" onclick="showReport('Cancelado');">Cancelar</button>
+        </form>
+      </div>
+    </div>
+    <div class="bg-cover"></div>
   </body>
 
   <script type="text/javascript">

@@ -153,3 +153,24 @@ function visorChange(url){
   console.log(url);
   $('.visor .screen img').attr("src",url);
 }
+
+function showReport(type, reported){
+
+  if(type == 'Comentario'){
+    var user = "";
+    for(var a = 0; a < reported.html().length; a++){
+      if(reported.html()[a] != '<'){
+        user += reported.html()[a];
+      }
+      else{
+        break;
+      }
+    }
+    $('.drop-down-reports .content').html(type + ": " + user);
+  }
+  else if(type == 'Publicación'){
+    $('.drop-down-reports .content').html(type + ": " + reported);
+  }
+  $('.drop-down-reports').fadeToggle(300);
+  $('.bg-cover').fadeToggle(300);
+}
