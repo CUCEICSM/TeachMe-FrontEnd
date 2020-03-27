@@ -260,6 +260,7 @@ input[type="radio"], input[type="checkbox"]{
     border-style: solid;
     width: 50%;
     text-align: center;
+    margin: 2px;
 }
 
 .upload-option h6{
@@ -275,9 +276,12 @@ input[type="radio"], input[type="checkbox"]{
 }
 
 .upload-container{    
-    width: 100%;  
-    display: inline-flex;
+    width: 90%;  
+    display: flex;
     justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
 }
 
 /*----------------------------------------Video | Documento-------------------------------------------------*/
@@ -391,12 +395,13 @@ h6{
  .external-content label{
     margin-right: 0px;
     width: 10%;
-    padding: 15px;
+    padding: 5px;
  }
 
  .external-content input{
     width: 90%;
     font-size: 12px;
+    height: 100%;
  }
 
 /*----------------------------------Botones--------------------------------------------------------------------------------*/

@@ -146,3 +146,122 @@ main .control ul li{
 main .control ul li:hover > .row{
   transform: rotate(180deg);
 }
+
+.top-notices {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.top-notices span{
+  position: absolute;
+  margin-left: 5%;
+  padding: 0;
+}
+
+.top-notices span:hover{
+  color: blue;
+  font-size: 22px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.popup-notices {
+  position: relative;
+  width: 45%;
+  padding: 3%;
+  border-radius: 15px;
+  box-shadow: 0 0 5px #CCC;
+  background: #FFF;
+  margin: 5% auto;
+  transition: all 5s ease-in-out;
+  text-align: center;
+}
+
+.closePopup {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F00;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.options{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.options button{
+  margin: 0;
+  margin-top: 5%;
+}
+
+.editNotice{
+  border: 2px solid;
+  justify-content: space-around;
+  overflow-y: auto;
+  margin-top: 5%;
+}
+
+.editNotice .notice{
+  width: 75% !important;
+  padding: 2px;
+  border: 1px;
+}
+
+.editNotice .opt{
+  color: gray;
+  transition: 0.2s;
+}
+
+.editNotice .opt:hover{
+  color: black;
+  font-size: 20px;
+}
+
+.editNotice .icon{
+  width: 12.5% !important;
+}
+
+.newNotice{
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.newNotice form{
+  width: 100%;
+}
+
+.newNotice label {
+  width: 25%;
+}
+
+.newNotice textarea{
+  resize: none;
+  width: 80%;
+}
+
+.newNotice select{
+  font-size: 20px;
+}
+
+.newNotice input{
+  height: 15%;
+}

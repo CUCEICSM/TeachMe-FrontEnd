@@ -1,6 +1,7 @@
-var lastIndex = 0;
+var lastIndex = -1;
 var editorSelected = false;
 var selfContent = false;
+var whichEditor = 0;
 
 const articleEditor = new EditorJS({
     holderId: 'article-editorjs',
@@ -13,9 +14,6 @@ const articleEditor = new EditorJS({
         list:{
             class:List,
             inlineToolbar: true
-        },
-        embed:{
-            class: Embed
         },
         image: SimpleImage,
         checklist: {
@@ -40,12 +38,6 @@ const articleEditor = new EditorJS({
             shortcut: 'CMD+SHIFT+C',
             inlineToolbar: true
         },
-        attaches: {
-            class: AttachesTool,
-            config: {
-              endpoint: 'http://127.0.0.1:5500/uploadFile'
-            }
-        },
         code: CodeTool,
         delimiter: Delimiter,
         MarkerTool:{
@@ -54,8 +46,8 @@ const articleEditor = new EditorJS({
     }
 });
 
-const attachEditor = new EditorJS({
-    holderId: 'attaches-editorjs',
+const videoEditor = new EditorJS({
+    holderId: 'video-editorjs',
     placeholder: 'Escribe tus notas del video',
     tools:{        
         header:{
@@ -65,8 +57,38 @@ const attachEditor = new EditorJS({
             class:List,
             inlineToolbar: true
         },
-        embed:{
-            class: Embed
+        checklist: {
+            class: Checklist,
+            inlineToolbar: true,
+        },
+        quote: Quote,
+        table: {
+            class: Table,
+            inlineToolbar: true
+        },
+        inlineCode: {
+            class: InlineCode,
+            shortcut: 'CMD+SHIFT+C',
+            inlineToolbar: true
+        },
+        code: CodeTool,
+        delimiter: Delimiter,
+        MarkerTool:{
+            class: MarkerTool
+        }
+    }
+});
+
+const documentEditor = new EditorJS({
+    holderId: 'document-editorjs',
+    placeholder: 'Escribe tus notas del documento',
+    tools:{        
+        header:{
+            class: Header
+        },
+        list:{
+            class:List,
+            inlineToolbar: true
         },
         checklist: {
             class: Checklist,
@@ -92,45 +114,32 @@ const attachEditor = new EditorJS({
 
 function DisplayEditor(type){
 
-    if(type == "articulo"){
-        
-        document.getElementById("article-editor").style.display = "inline";
-        document.getElementById("video-editor").style.display = "none";
-        document.getElementById("document-editor").style.display = "none"; 
-        document.getElementById("attaches-editor").style.display = "none";
-        document.getElementById("images-container").style.display = "inline";
+    document.getElementById("editors-container").style.display = "inline";
 
+    document.getElementById("article-editorjs").style.display = "none";    
+    document.getElementById("images-container").style.display = "none";
+
+    document.getElementById("video-editor").style.display = "none";  
+    document.getElementById("video-editorjs").style.display = "none";
+
+    document.getElementById("document-editor").style.display = "none";
+    document.getElementById("document-editorjs").style.display = "none";
+    
+
+    if(type == "articulo" || type == "ejercicio" || type == "ejemplo"){
+        document.getElementById("article-editorjs").style.display = "block";
+        document.getElementById("images-container").style.display = "inline"; 
+        whichEditor = 1; 
         
-    }else if(type == "ejercicio"){
-        
-        document.getElementById("article-editor").style.display = "inline";
-        document.getElementById("video-editor").style.display = "none";
-        document.getElementById("document-editor").style.display = "none";  
-        document.getElementById("attaches-editor").style.display = "none";
-        document.getElementById("images-container").style.display = "inline";
-        
-    }else if(type == "ejemplo"){
-        
-        document.getElementById("article-editor").style.display = "inline";
-        document.getElementById("video-editor").style.display = "none";
-        document.getElementById("document-editor").style.display = "none"; 
-        document.getElementById("attaches-editor").style.display = "none"; 
-        document.getElementById("images-container").style.display = "inline";
-        
-    }
-    else if(type == "video"){
-        document.getElementById("article-editor").style.display = "none";
+    }else if(type == "video"){        
         document.getElementById("video-editor").style.display = "inline";
-        document.getElementById("document-editor").style.display = "none";  
-        document.getElementById("attaches-editor").style.display = "inline";      
-        document.getElementById("images-container").style.display = "none";  
+        document.getElementById("video-editorjs").style.display = "block";
+        whichEditor = 2; 
         
-    }else if(type="document"){
-        document.getElementById("article-editor").style.display = "none";
-        document.getElementById("video-editor").style.display = "none"; 
-        document.getElementById("document-editor").style.display = "inline"; 
-        document.getElementById("attaches-editor").style.display = "inline";
-        document.getElementById("images-container").style.display = "none";
+    }else if(type="document"){        
+        document.getElementById("document-editor").style.display = "inline";
+        document.getElementById("document-editorjs").style.display = "block";      
+        whichEditor = 3;   
     }
 
     if(!editorSelected){
@@ -138,33 +147,44 @@ function DisplayEditor(type){
         document.getElementById("botones").style.display = "flex";
         editorSelected = true;
     }
+
+    lastIndex = -1;
 }
 
-function SetTypeEmbed(type){
-    /*if(type == "link"){
-        document.getElementById("link-embed").style.display = "inline";
-        document.getElementById("upload-embed").style.display = "none";
-    }else if(type =="subir"){
-        document.getElementById("upload-embed").style.display = "inline";
-        document.getElementById("link-embed").style.display = "none";
-    }*/
-}
 
-function SetTypeDocument(type){
-    if(type == "link"){
-        document.getElementById("document-link").style.display = "inline";
-        document.getElementById("document-upload").style.display = "none";
-    }else if(type =="subir"){
-        document.getElementById("document-link").style.display = "none";
-        document.getElementById("document-upload").style.display = "inline";
+function SetDocumentOpacity(opcion){
+    if(opcion == "link"){
+        
+        document.getElementById("link-embed").style.opacity = 1;
+        document.getElementById("upload-embed").style.opacity = 0.5;
+
+    }else if(opcion == "upload"){
+        
+        document.getElementById("upload-embed").style.opacity = 1;
+        document.getElementById("link-embed").style.opacity = 0.5;
     }
 }
+
+
 
 let sB = document.getElementById("saveButton");
 
 sB.addEventListener('click',function(){
-    articleEditor.save().then((outputData) =>
-    SavePublication(outputData));
+    switch(whichEditor){
+        case 1:
+            articleEditor.save().then((outputData) =>
+            SavePublication(outputData));
+            break;
+        case 2:
+            videoEditor.save().then((outputData) =>
+            SavePublication(outputData));
+            break;
+        case 3:
+            documentEditor.save().then((outputData) =>
+            SavePublication(outputData));
+            break;
+    }
+    
 })
 
 function SavePublication(myData){
@@ -184,21 +204,60 @@ function SavePublication(myData){
 }
 
 function ClearEditor(){
-    articleEditor.clear();
+
+    switch(whichEditor){
+        case 1:
+            articleEditor.clear();
+            break;
+        case 2:
+            videoEditor.clear();
+            break;
+        case 3:
+            documentEditor.clear();
+            break;
+    }
+    
     lastIndex = -1;
 
 }
 
 function InsertBlock(toAdd){   
     
-    articleEditor.caret.setToBlock(lastIndex,"end");
-    articleEditor.blocks.insert(toAdd);
-    articleEditor.caret.setToBlock(lastIndex+1,"end");
+    switch(whichEditor){
+        case 1:
+            articleEditor.caret.setToBlock(lastIndex,"end");
+            articleEditor.blocks.insert(toAdd);
+            articleEditor.caret.setToBlock(lastIndex+1,"end");
+            break;
+        case 2:
+            videoEditor.caret.setToBlock(lastIndex,"end");
+            videoEditor.blocks.insert(toAdd);
+            videoEditor.caret.setToBlock(lastIndex+1,"end");
+            break;
+        case 3:
+            documentEditor.caret.setToBlock(lastIndex,"end");
+            documentEditor.blocks.insert(toAdd);
+            documentEditor.caret.setToBlock(lastIndex+1,"end");
+            break;
+    }
+    
 }
 
 function TellMyIndex(){
-    lastIndex = articleEditor.blocks.getCurrentBlockIndex();
-    console.log(lastIndex);
+
+    switch(whichEditor){
+        case 1:
+            lastIndex = articleEditor.blocks.getCurrentBlockIndex();
+            break;
+        case 2:
+            lastIndex = videoEditor.blocks.getCurrentBlockIndex();
+            break;
+        case 3:
+            lastIndex = documentEditor.blocks.getCurrentBlockIndex();
+            break;
+    }
+    
+    
 }
 
 function SearchEmbed(){

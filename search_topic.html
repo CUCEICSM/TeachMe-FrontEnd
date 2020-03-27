@@ -38,19 +38,72 @@
       <h1>Resultados de algoritmos evolutivos</h1>
       <div class="control">
         <ul>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Fecha</li>
+          <!--<li onclick=""><i class="fas fa-arrow-up row"></i> Materia</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Tema</li>
           <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>
           <li onclick=""><i class="fas fa-arrow-up row"></i> Valoración</li>
           <li onclick=""><i class="fas fa-arrow-up row"></i> Vistas</li>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Tipo</li>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Materia</li>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Tema</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Fecha</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Tipo</li>-->
+          
+          <li>
+            <label class="container">Materia
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Tema
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Nombre
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Valoración
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Vistas
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Fecha
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li onclick="ShowTypes();">
+            <label id="type-label" class="container">Tipo (no seleccionado)</label>
+            
+            
+          </li>         
+          
         </ul>
         <ul>
             <li onclick="ShowNotFound();"><i class="fas fa-arrow-up row"></i></li>
         </ul>
       </div>
-
+      <!---------------------------Tipos para el filtro------------------------------>
+      <div id="type-list" class="desplegable-list">
+        <ul>
+          <li onclick="ShowTypes('Artículo');"><i class="fas fa-file-alt"></i>Artículo</li>
+          <li onclick="ShowTypes('Ejemplo');"><i class="fas fa-chalkboard-teacher"></i>Ejemplo</li>
+          <li onclick="ShowTypes('Ejercicio');"><i class="fas fa-file-signature"></i>Ejercicio</li>
+          <li onclick="ShowTypes('Video');"><i class="fab fa-youtube"></i>Video</li>
+          <li onclick="ShowTypes('Documento');"><i class="fas fa-file-pdf"></i>Documento</li>
+        </ul>
+        
+      </div>
       <section id="not-found-message" class="not-found">
           <div>
               <p>No se han encontrado coincidencias con tu búsqueda.</p>

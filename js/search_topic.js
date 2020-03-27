@@ -25,3 +25,21 @@ function ShowNotFound(){
         notFound = false;
     }
 }
+
+var showingTypes = false;
+function ShowTypes(tipo){
+    var myLabel = document.getElementById("type-label");
+
+    if(!showingTypes){
+        //tipos.style.display = "flex";
+        $('.desplegable-list').show();
+        showingTypes = true;    
+    }else if(showingTypes){
+        //tipos.style.display = "none";
+        showingTypes = false;
+        $('.desplegable-list').hide();
+        if(tipo != undefined)
+            myLabel.innerHTML = "Tipo: " + tipo;
+    }
+    
+}
