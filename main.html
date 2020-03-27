@@ -179,7 +179,10 @@
 
     <aside>
       <section class="notice">
-        <h5>Avisos</h5>
+        <div class="top-notices">
+          <h5>Avisos</h5>
+          <span class="icon" onclick="ShowNoticesEdit();"><i class="far fa-edit"></i></span>
+        </div>
         <div class="adds pop-warning">
           <span class="icon"><i class="fas fa-exclamation"></i></span>
           <div>
@@ -225,7 +228,8 @@
         </li>
         <li class="menu-theme">TeachMe
           <ul>
-            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
+            <a href="main.html"> <li class="menu-link"><i class="fas fa-home"></i> Inicio</li> </a>
+            <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catálogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
             <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar temas</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
@@ -285,5 +289,71 @@
         </li>
       </ul>
     </div>
+
+    <div class="overlay">
+      <div class="popup-notices">
+        <h2>Editar panel de avisos</h2>
+        <div class="closePopup" onclick="ClosePopupNotices();" title="Cerrar">&times;</div>
+        <div class="options">
+          <button class="btn small" onclick="ViewEditNotices();">Editar</button>
+          <button class="btn small" onclick="ViewNewNotice();">Nuevo aviso</button>
+        </div>
+
+        <div class="newNotice">
+          <form action="">
+            <label for="tipo">Tipo de aviso: </label>
+            <select id="tipo" name="tipo">
+              <option value="advice">Noticia</option>
+              <option value="warning">Advertencia</option>
+              <option value="danger">Emergencia</option>
+            </select><br>
+            <textarea rows="7">Escribe aquí el aviso</textarea><br>
+            <label for="fecha">Fecha: </label>
+            <input type="datetime-local" id="fecha" name="fecha"><br>
+            <input type="submit" value="Guardar" class="btn primary small">
+            <input type="reset" value="Cancelar" class="btn small" onclick="ClosePopupNotices();">
+          </form>
+        </div>
+
+        <table class="editNotice">
+          <tr>
+            <td class="notice">
+              <div class="adds pop-warning">
+                <span class="icon"><i class="fas fa-exclamation"></i></span>
+                <div>
+                  <span class="title">Periodo de mantenimiento programado</span>
+                  <span class="date">20/03/2020 8:00 AM</span>
+                </div>
+              </div>
+            </td>
+            <td class="icon">
+              <span class="opt"><i class="fas fa-trash-alt"></i></span>
+            </td>
+            <td class="icon">
+              <span class="opt"><i class="fas fa-edit"></i></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="notice">
+              <div class="adds pop-advice">
+                <span class="icon"><i class="fas fa-check-circle"></i></span>
+                <div>
+                  <span class="title">Ya somos más de 1000 usuarios</span>
+                  <span class="date">20/03/2020 8:00 AM</span>
+                </div>
+              </div>
+            </td>
+            <td class="icon">
+              <span class="opt"><i class="fas fa-trash-alt"></i></span>
+            </td>
+            <td class="icon">
+              <span class="opt"><i class="fas fa-edit"></i></span>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
   </body>
 </html>
