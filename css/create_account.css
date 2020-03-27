@@ -81,13 +81,25 @@ main{
   width: 100%;
 }
 
+.data div{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 label {
-  padding-left: 15px;
+  padding-left: 20px;
+  font-size: 14px;
 }
 
 input{
-  width: 70%;
+  width: 65%;
   padding: 15px;
+}
+
+input:focus{
+  transform: scale(1.05)!important;
 }
 
 span {
