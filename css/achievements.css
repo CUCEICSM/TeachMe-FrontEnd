@@ -210,7 +210,7 @@ hr{
   display: none;
   position: fixed;
   border: 10px solid rgba(15, 54, 187, 1);
-  border-radius: 15%;
+  border-radius: 5px;
   background: white;
   margin-top: -100px;
   text-align: left;

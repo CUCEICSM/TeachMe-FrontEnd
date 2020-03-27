@@ -116,3 +116,21 @@ function GoBack(){
     window.close();
   window.history.back();
 }
+
+function ShowNoticesEdit(){
+  $('.overlay').show(300);
+}
+
+function ClosePopupNotices(){
+  $('.overlay').hide(300);
+}
+
+function ViewNewNotice(){
+  $('.editNotice').hide(300);
+  $('.newNotice').show(300);
+}
+
+function ViewEditNotices(){
+  $('.editNotice').show(300);
+  $('.newNotice').hide(300);
+}
