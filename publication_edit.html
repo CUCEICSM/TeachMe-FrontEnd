@@ -15,6 +15,8 @@
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+
+    <!--------Funciones del editor-------------------------->
     <script src="./js/editor/editor.js"></script>
     <script src="./js/editor/header.js"></script>
     <script src="./js/editor/list.js"></script>
@@ -113,28 +115,72 @@
           <span class="checkmark"></span>
         </label>
 
+      </div>    
+
+
+      <!-----------------------------------------------Video--------------------------------------------------------------->
+      <div id="video-editor" class="editors">
+
+        <h6>Tipo de carga de Video</h6>
+
+        <div id="video-upload-options" class="upload-container">
+
+          <div class="upload-option">
+
+            <h6>Link (Youtube)</h6>
+            <label >Link de video (no embed):</label><br>
+            <input id="embed-input" type="text" placeholder="Link..."><i class="fa fa-search" onclick="SearchEmbed();"></i><br>
+            <iframe id="video-embed" width="420" height="315"src="" class="video-embed"></iframe>
+
+          </div>
+        </div>
       </div>
 
-      <div id="article-editor" class="editors">
+      <!-----------------------------------------------Documento--------------------------------------------------------------->
+      <div id="document-editor" class="editors">
+
+        <h6>Tipo de carga de Documento</h6>
+
+        <div id="document-upload-options" class="upload-container">
+
+          <div id="link-embed" class="upload-option" onclick="SetDocumentOpacity('link');">
+            <h6>Link</h6>
+            <label>Link del documento:</label><br>
+            <input type="text" placeholder="Link..."/>
+          </div>
+
+          <div id="upload-embed" class="upload-option" onclick="SetDocumentOpacity('upload');">
+            <h6>Documento propio (PDF)</h6>
+            <label for="document-uploader">Selecciona documento:</label><br>
+            <input type="file" id="document-uploader" placeholder="Link...">
+          </div>
+
+        </div>
+      </div>
+
+      <!--------------------------------------------------Editores------------------------------------------------------>
+      <div id="editors-container" class="editors">
         <!----------------------------------------------Control editor------------------------------------------->
         <div class="editor-conf">
+
           <ul>
               <li onclick="InsertBlock('list');"><i class="fas fa-list-ol"></i></li>
               <li onclick="InsertBlock('checklist');"><i class="fas fa-check-circle"></i></li>
               <li onclick="InsertBlock('quote');"><i class="fas fa-quote-left"></i></li>
               <li onclick="InsertBlock('table');"><i class="fas fa-table"></i></li>
-              <li onclick="InsertBlock('linkTool');"><i class="fas fa-link"></i></li>
-              <li onclick="InsertBlock('attaches');"><i class="fas fa-file"></i></li>
+              <li onclick="InsertBlock('linkTool');"><i class="fas fa-link"></i></li>            
               <li onclick="InsertBlock('code');"><i class="fas fa-code"></i></li>
               <li onclick="InsertBlock('delimiter');"><i class="fas fa-asterisk"></i></li>
           </ul>
           <ul>
             <li onclick="ClearEditor();"><i class="fas fa-history"></i></li>
           </ul>
-        </div>
-        <!---------------------------------------------Editor------------------------------------>
-        <div id="article-editorjs" class="editor article-editor" onfocusout="TellMyIndex();"></div>
 
+        </div>
+        <!---------------------------------------------Tipos editores------------------------------------>
+        <div id="video-editorjs" class="editor article-editor" onfocusout="TellMyIndex();"></div>
+        <div id="document-editorjs" class="editor article-editor" onfocusout="TellMyIndex();"></div>
+        <div id="article-editorjs" class="editor article-editor" onfocusout="TellMyIndex();"></div>
 
       </div>
 
@@ -147,77 +193,6 @@
         <i class="fas fa-upload" onclick="AddImage();"></i>
         <div id="images-items" class="images-items"></div>
       </div>
-
-
-      <!-----------------------------------------------Video--------------------------------------------------------------->
-      <div id="video-editor" class="editors">
-        <h6>Tipo de carga de Video</h6>
-
-
-        <div id="video-upload-options" class="upload-container">
-
-          <div id="link-embed" class="upload-option">
-            <h6>Link (Youtube)</h6>
-            <label >Link de video (no embed):</label><br>
-            <input id="embed-input" type="text" placeholder="Link..."><i class="fa fa-search" onclick="SearchEmbed();"></i><br>
-            <iframe id="video-embed" width="420" height="315"src="" class="video-embed"></iframe>
-          </div>
-
-          </div>
-
-
-      </div>
-
-      <!-----------------------------------------------Documento--------------------------------------------------------------->
-      <div id="document-editor" class="editors">
-        <h6>Tipo de carga de Documento</h6>
-        <div id="document-upload-options" class="upload-container">
-
-          <div id="link-embed" class="upload-option">
-            <h6>Link</h6>
-            <label>Link del documento:</label><br>
-            <input type="text" placeholder="Link...">
-          </div>
-
-          <div id="upload-embed" class="upload-option">
-            <h6>Documento propio (PDF)</h6>
-
-            <label for="document-uploader">Selecciona documento:</label><br>
-            <input type="file" id="document-uploader" placeholder="Link...">
-
-
-          </div>
-        </div>
-
-
-
-      </div>
-
-      <!--------------------------------------------------Editor attaches------------------------------------------------------>
-      <div id="attaches-editor" class="editors">
-      <!----------------------------------------------Control editor------------------------------------------->
-      <div class="editor-conf">
-        <ul>
-            <li onclick="InsertBlock('list');"><i class="fas fa-list-ol"></i></li>
-            <li onclick="InsertBlock('checklist');"><i class="fas fa-check-circle"></i></li>
-            <li onclick="InsertBlock('quote');"><i class="fas fa-quote-left"></i></li>
-            <li onclick="InsertBlock('table');"><i class="fas fa-table"></i></li>
-            <li onclick="InsertBlock('linkTool');"><i class="fas fa-link"></i></li>
-            <li onclick="InsertBlock('attaches');"><i class="fas fa-file"></i></li>
-            <li onclick="InsertBlock('code');"><i class="fas fa-code"></i></li>
-            <li onclick="InsertBlock('delimiter');"><i class="fas fa-asterisk"></i></li>
-        </ul>
-        <ul>
-          <li onclick="ClearEditor();"><i class="fas fa-history"></i></li>
-        </ul>
-      </div>
-      <!---------------------------------------------Editor------------------------------------>
-      <div id="attaches-editorjs" class="editor article-editor" onfocusout="TellMyIndex();"></div>
-
-
-    </div>
-
-
 
       <!-------------------------------------------Contenido propio | de alguien más -------------->
       <div id="own-content" class="own-content">
@@ -232,13 +207,14 @@
           <input type="text">
         </div>
 
-        <!-------------------------------Terms warning-->
-        <div class="terms-warning">
+        <!-------------------------------Terms warning------------------------------------------>
+        <div class="pop-warning">
           <p>TeachME no se hace responsable por el mal uso de contenido propietario.
-             Si quieres saber más, te invitamos a leer nuestra sección de <a href="terms.html">términos y condiciones</a>
+             Si quieres saber más, te invitamos a leer nuestra sección de <a href="terms.html">Términos y Condiciones</a>
             referente al contenido.</p>
         </div>
       </div>
+
       <!--------------------------------------------Botones------------------------------->
       <div id="botones" class="botones">
         <button type="button" id="saveButton" class="btn auxiliary">Guardar</button>
@@ -246,9 +222,10 @@
       </div>
 
       <script src="./js/publication_edit.js"></script>
+
     </main>
 
-
+    <!---------------------------------------------Menús y notificaciones----------------------->
     <div class="drop-down bg-blue">
       <div class="triangle-up"></div>
       <ul>

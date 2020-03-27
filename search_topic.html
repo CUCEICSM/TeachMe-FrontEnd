@@ -22,7 +22,7 @@
         <a href="main.html"><div class="logo-sm" title="Inicio">
           TeachME <img src="img/logoAB.png" class="logo-img">
         </div></a>
-        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div></a>
+        <a href="user.html"><div class="prof-pict" style="background-image: url('img/users/user_profile.jpg');" alt="Perfil de usuario" title="Perfil de usuario"></div>Username</a>
         <a onclick="toggleNotifications();"><div class="notification"><i class="fas fa-bell"></i><span class="noti-count">7</span></div></a>
       </div>
       <div class="nav">
@@ -38,19 +38,72 @@
       <h1>Resultados de algoritmos evolutivos</h1>
       <div class="control">
         <ul>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Fecha</li>
+          <!--<li onclick=""><i class="fas fa-arrow-up row"></i> Materia</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Tema</li>
           <li onclick=""><i class="fas fa-arrow-up row"></i> Nombre</li>
           <li onclick=""><i class="fas fa-arrow-up row"></i> Valoración</li>
           <li onclick=""><i class="fas fa-arrow-up row"></i> Vistas</li>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Tipo</li>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Materia</li>
-          <li onclick=""><i class="fas fa-arrow-up row"></i> Tema</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Fecha</li>
+          <li onclick=""><i class="fas fa-arrow-up row"></i> Tipo</li>-->
+          
+          <li>
+            <label class="container">Materia
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Tema
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Nombre
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Valoración
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Vistas
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li>
+            <label class="container">Fecha
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </li>
+          <li onclick="ShowTypes();">
+            <label id="type-label" class="container">Tipo (no seleccionado)</label>
+            
+            
+          </li>         
+          
         </ul>
         <ul>
             <li onclick="ShowNotFound();"><i class="fas fa-arrow-up row"></i></li>
         </ul>
       </div>
-
+      <!---------------------------Tipos para el filtro------------------------------>
+      <div id="type-list" class="desplegable-list">
+        <ul>
+          <li onclick="ShowTypes('Artículo');"><i class="fas fa-file-alt"></i>Artículo</li>
+          <li onclick="ShowTypes('Ejemplo');"><i class="fas fa-chalkboard-teacher"></i>Ejemplo</li>
+          <li onclick="ShowTypes('Ejercicio');"><i class="fas fa-file-signature"></i>Ejercicio</li>
+          <li onclick="ShowTypes('Video');"><i class="fab fa-youtube"></i>Video</li>
+          <li onclick="ShowTypes('Documento');"><i class="fas fa-file-pdf"></i>Documento</li>
+        </ul>
+        
+      </div>
       <section id="not-found-message" class="not-found">
           <div>
               <p>No se han encontrado coincidencias con tu búsqueda.</p>
@@ -231,6 +284,7 @@
       <ul>
         <li class="menu-theme">Usuario
           <ul>
+            <a href="user.html"> <li class="menu-link"><i class="fas fa-user"></i> Perfil de usuario</li> </a>
             <a href="publication_edit.html"><li class="menu-link"><i class="fas fa-plus"></i> Crear publicación</li></a>
             <a href="favs.html"> <li class="menu-link"><i class="fas fa-heart"></i> Favoritos</li></a>
             <a href="start.html"><li class="menu-link"><i class="fas fa-power-off"></i> Cerrar sesión</li></a>
@@ -240,7 +294,7 @@
           <ul>
             <a href="catalogue_view.html"><li class="menu-link"><i class="fas fa-book"></i> Catalogo de temas</li></a>
             <a href="stats.html"> <li class="menu-link"><i class="fas fa-chart-pie"></i> Estadísticas</li> </a>
-            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Temas solicitados</li></a>
+            <a href="topics_request.html"><li class="menu-link"><i class="fas fa-desktop"></i> Solicitar temas</li></a>
             <a href="terms.html"><li class="menu-link"><i class="fas fa-file-signature"></i> Términos y condiciones</li></a>
           </ul>
         </li>
