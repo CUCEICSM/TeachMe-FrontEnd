@@ -116,7 +116,7 @@ header .profile .navigation ul li:hover{
 main{
   margin-top: 60px;
   min-height: 500px;
-  width: 90%;
+  width: 80%;
   position: relative;
 
   display: flex;
@@ -125,13 +125,9 @@ main{
   flex-flow: row wrap;
 }
 
-hr{
-  margin: 10px 50px 10px 0;
-  border: 1px solid rgba(80, 15, 187, 0.25);
-}
-
 .user{
-  width: 75%;
+  width: 100%;
+  padding: 25px;
 }
 
 .user .gen{
@@ -186,15 +182,13 @@ hr{
 
 .achievements {
   text-align: center;
-  margin-top: 30px;
   margin: 0;
+  margin-top: 25px;
   padding: 10px;
   border: 0;
-  display: block;
-}
-
-.achRow {
-  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .achievement {
@@ -206,69 +200,163 @@ hr{
   z-index: 1;
 }
 
-.achList {
-  display: none;
-  position: fixed;
-  border: 10px solid rgba(15, 54, 187, 1);
-  border-radius: 5px;
-  background: white;
-  margin-top: -100px;
-  text-align: left;
+.achievement h4{
+  margin: 10px 0;
+}
+
+.badge{
+  position: relative;
+  height: 125px;
+  width: 125px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.metalImg {
+  /* background: linear-gradient(to right, rgba(0,0,0,.0), rgba(116, 116, 116, 0.7));*/
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   z-index: 1;
-  width: 700px;
+  background: linear-gradient(to right, transparent, transparent, transparent, white, transparent, transparent, white, transparent,transparent, white, transparent,transparent, white, transparent, transparent, transparent);
+  background-size: 1800% 1800%;
+  animation: rainbow 10s infinite;
+  opacity: 0.5;
 }
 
-.achDesc {
-  margin-left: 40px;
-  clear: both;
-  margin: 15px 0px;
-}
-
-.achievement:hover .achList{
-display: block;
+@keyframes rainbow {
+  0%{background-position:0% 50%}
+  50%{background-position:50% 100%}
+  100%{background-position: 100% 120%}
 }
 
 .achImg{
-  height: 125px;
-  width: 125px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  position: relative;
+  z-index: 0;
+  filter: grayscale(50%);
 }
 
 .bronze{
   border: solid 5px rgb(205, 127, 50);
-  box-shadow: 0 0 10px rgba(205, 127, 50, 1);
+  color: rgb(205, 127, 50);
+  filter: sepia(75%) brightness(50%);
 }
 
 .silver{
   border: solid 5px rgb(138, 149, 151);
-  box-shadow: 0 0 10px rgba(138, 149, 151, 1);
+  color: rgb(138, 149, 151);
+  filter: grayscale(100%) brightness(75%);
 }
 
 .gold{
   border: solid 5px rgb(255, 190, 0);
-  box-shadow: 0 0 10px rgba(255, 190, 0, 1);
+  color: rgb(255, 190, 0);
+  filter: sepia(100%) brightness(100%);
 }
 
 .platinum{
   border: solid 5px rgb(227, 228, 229);
-  box-shadow: 0 0 10px rgba(227, 228, 229, 1);
+  color: rgb(227, 228, 229);
+  filter: grayscale(100%) brightness(100%);
 }
 
 .legend {
-  border: solid 5px rgb(125, 0, 190);
-  box-shadow: 0 0 10px rgba(125, 0, 190, 1);
+  border: solid 5px rgb(255, 255, 187);
+  color: rgb(255, 255, 187);
+  filter: sepia(105%);
 }
 
 .unique{
   border: solid 5px rgb(32, 224, 19);
-  box-shadow: 0 0 10px rgba(32, 224, 19, 1);
+  color: rgb(32, 224, 19);
+  filter: none brightness(75%);
 }
 
 .secret{
   border: solid 5px rgb(0, 0, 0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  color: white;
+  filter: brightness(60%) sepia(100%);
 }
 
 .locked{
-  filter: grayscale(100%) opacity(25%);
+  color: white;
+  filter: grayscale(100%) opacity(45%) brightness(80%);
+  z-index: 5;
+}
+
+aside{
+  margin-top: 100px;
+  width: 20%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+aside .info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+aside .level {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  color: white;
+}
+
+aside .description{
+  width: 100%;
+  padding: 10px 0 25px 0;
+}
+
+aside .progress{
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+aside .progress .bar{
+  width: 70%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: gold;
+}
+
+aside .progress .percent{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+  left: 0;
 }

@@ -275,8 +275,16 @@ main .rate .actions button{
   margin: 5px;
 }
 
+aside .btn{
+  margin: 25px 0 0 0;
+}
+
+aside h5{
+  margin: 10px 0 15px 0;
+}
+
 aside .related-by-author{
-  margin: 25px 25px 15px 5px;
+  margin: 0px 25px 15px 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -312,6 +320,7 @@ aside .related-by-author .post i{
 
 .drop-down-coments{
   padding: 1px;
+  position: fixed;
 }
 
 .drop-down-coments .coments{

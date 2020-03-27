@@ -175,7 +175,6 @@
         </div>
 
         <div class="actions">
-          <button class="btn" type="button" name="button" onclick="toggleComents();">Comentarios</button>
           <button class="btn success" type="button" name="button"  onclick="selectFav(this.firstChild);"><i class="fas fa-heart"></i> Favorito</button>
           <button class="btn danger" type="button" name="button" onclick="showReport('Publicación', 'Algoritmo de búsqueda heurística voraz primero el mejor');"><i class="fas fa-exclamation-circle"></i> Reportar</button>
         </div>
@@ -183,6 +182,7 @@
     </main>
 
     <aside>
+      <button class="btn primary" type="button" name="button" onclick="toggleComents();">Comentarios</button>
       <section class="related-by-author">
         <h5>El autor también publicó: </h5>
         <div id="article" class="post" onclick="postArticle();"><i class="fas fa-file-alt"></i> Articulo</div>
